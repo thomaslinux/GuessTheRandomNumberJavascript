@@ -1,4 +1,4 @@
-# GuessTheRandomNumberJavascript
+# Guess The Random Number Javascript
 Guess the number between 0 and 1000
 
 # Latest version available here :
