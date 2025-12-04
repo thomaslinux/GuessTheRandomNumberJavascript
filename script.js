@@ -43,7 +43,7 @@ function verif() {
         output.innerText = "You guessed right !"
     }
     nbVerif++;
-    infoNbVerif.innerText = nbVerif;
+    //infoNbVerif.innerText = nbVerif;
 }
 
 /**
