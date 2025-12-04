@@ -21,7 +21,10 @@ br {
   background-color: red !important;
 }
 
-* {
-  font-size: 3rem;
+body {
+  /*https://developer.mozilla.org/fr/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: monospace;
 }
