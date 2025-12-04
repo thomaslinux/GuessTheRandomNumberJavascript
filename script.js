@@ -1,7 +1,9 @@
 output = document.getElementById("output");
 input = document.getElementById("input");
+infoNbVerif = document.getElementbyId("nbVerif");
 
 nbToFind = alea(0,1000);
+nbVerif = 0;
 verif();
 input.addEventListener("wheel",onWheel)
 input.addEventListener("input",verif)
@@ -13,15 +15,17 @@ function onWheel(e) {
     } else if (e.deltaY < 0) { // on scroll up
         increaseInput();
     }
-    verif();
+    
 }
 
 function increaseInput() {
     input.value++;
+    verif();
 }
 
 function decreaseInput() {
     input.value--;
+    verif();
 }
 
 function verif() {
@@ -36,6 +40,7 @@ function verif() {
     } else {
         output.innerText = "You guessed right !"
     }
+    infoNbVerif.innerText = nbVerif++;
 }
 
 /**
