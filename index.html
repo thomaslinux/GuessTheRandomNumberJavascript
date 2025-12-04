@@ -6,14 +6,16 @@
     <title>Find the number</title>
 </head>
 <body>
-    <h1>Find the random positive number between 0 and 1000</h1>
+    <h1>Find the random positive number between <span id="min">0</span> and <span id="max">1000</span></h1>
     <div>Nombre de verif : <span id="nbVerif"></span></div>
     <div id="output">Find the number :</div>
     <input id="input" type="number" placeholder="enter a number"></input>
-    <button onclick="increaseInput()">+</button>
-    <button onclick="decreaseInput()">-</button>
+    <br>
+    <button id="increase" onclick="increaseInput()">+</button>
+    <button id="decrease" onclick="decreaseInput()">-</button>
     <br>
     <button onclick="document.location.reload()">Nouvelle partie</button>
     <script src="script.js"></script>
+    <link href="style.css" rel=stylesheet />
 </body>
 </html>
