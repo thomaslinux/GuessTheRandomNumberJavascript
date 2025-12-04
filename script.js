@@ -1,7 +1,7 @@
 output = document.getElementById("output");
 input = document.getElementById("input");
 
-nbToFind = alea(0,100);
+nbToFind = alea(0,1000);
 verif();
 input.addEventListener("wheel",onWheel)
 input.addEventListener("input",verif)
