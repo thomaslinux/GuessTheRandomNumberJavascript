@@ -1,6 +1,6 @@
 output = document.getElementById("output");
 input = document.getElementById("input");
-infoNbVerif = document.getElementbyId("nbVerif");
+infoNbVerif = document.getElementById("nbVerif");
 
 nbToFind = alea(0,1000);
 nbVerif = 0;
@@ -43,7 +43,7 @@ function verif() {
         output.innerText = "You guessed right !"
     }
     nbVerif++;
-    //infoNbVerif.innerText = nbVerif;
+    infoNbVerif.innerText = nbVerif;
 }
 
 /**
