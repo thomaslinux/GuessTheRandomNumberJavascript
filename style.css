@@ -3,18 +3,22 @@ button {
   color: white;
   border: none;
   margin: 20px;
-  min-width: 20px;
-  min-height: 20px;
+  min-width: 50px;
+  min-height: 50px;
   max-width: 50%;
   font-weight: bold;
 }
 
+
+br {
+ height: 2rem;
+}
 #increase {
-  background-color: green;
+  background-color: green !important;
 }
 
 #decrease {
-  background-color: red;
+  background-color: red !important;
 }
 
 * {
