@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find the number</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Find the random positive number between <span id="min">0</span> and <span id="max">1000</span></h1>
     <div>Nombre de verif : <span id="nbVerif"></span></div>
     <div id="output">Find the number :</div>
-    <input id="input" type="number" placeholder="enter a number"></input>
+    <input autofocus id="input" type="number" placeholder="enter a number">
+    </input>
     <br>
     <button id="increase" onclick="increaseInput()">+</button>
     <button id="decrease" onclick="decreaseInput()">-</button>
     <br>
     <button onclick="document.location.reload()">Nouvelle partie</button>
     <script src="script.js"></script>
-    <link href="style.css" rel="stylesheet" />
 </body>
 </html>
