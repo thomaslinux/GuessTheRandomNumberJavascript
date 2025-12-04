@@ -1,9 +1,12 @@
-output = document.getElementById("output");
-input = document.getElementById("input");
-infoNbVerif = document.getElementById("nbVerif");
+const MIN = 0;
+const MAX = 1000;
 
-nbToFind = alea(0,1000);
-nbVerif = 0;
+const output = document.getElementById("output");
+const input = document.getElementById("input");
+const infoNbVerif = document.getElementById("nbVerif");
+
+let nbToFind = alea(MIN,MAX);
+let nbVerif = 0;
 verif();
 input.addEventListener("wheel",onWheel)
 input.addEventListener("input",verif)
