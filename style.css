@@ -24,6 +24,6 @@ br {
 body {
   /*https://developer.mozilla.org/fr/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element*/
   display: grid;
-  place-items: center;
+  /*place-items: center;*/
   font-family: monospace;
 }
