@@ -8,6 +8,8 @@ verif();
 input.addEventListener("wheel",onWheel)
 input.addEventListener("input",verif)
 
+infoNbVerif.innerText = "0";
+
 function onWheel(e) {
     e.preventDefault();
     if (e.deltaY > 0) { // on scroll down
@@ -40,7 +42,8 @@ function verif() {
     } else {
         output.innerText = "You guessed right !"
     }
-    infoNbVerif.innerText = nbVerif++;
+    nbVerif++;
+    infoNbVerif.innerText = nbVerif;
 }
 
 /**
