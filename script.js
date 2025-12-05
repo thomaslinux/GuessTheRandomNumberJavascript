@@ -41,14 +41,14 @@ function onWheel(e) {
 }
 
 function operation(operator, number) {
-    value = parseInt(input.value) || 0;
+    let value = parseInt(input.value) || 0;
     let result = 0;
-    match (operator) {
-        case '*': result = value * number; break;
-        case '+': result = value + number; break;
-        case '-': result = value - number; break;
-        case '/': result = value / number; break;
-        default: result = value;
+    switch (operator) {
+        case '*' : result = value * number; break;
+        case '+' : result = value + number; break;
+        case '-' : result = value - number; break;
+        case '/' : value != 0 ? result = value / number : result = value; break;
+        default : result = value; break;
     }
     input.value = Math.floor(result);
     verifNb();
