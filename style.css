@@ -3,9 +3,8 @@ button {
   color: white;
   border: none;
   margin: 20px;
-  min-width: 50px;
   min-height: 50px;
-  max-width: 50%;
+  width: 50%;
   font-weight: bold;
 }
 
@@ -27,7 +26,6 @@ br {
 body {
   /*https://developer.mozilla.org/fr/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element*/
   display: grid;
-  width: 100%;
-  place-items: center;
+  margin: 5%;
   font-family: monospace;
 }
