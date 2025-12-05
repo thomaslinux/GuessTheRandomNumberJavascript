@@ -7,23 +7,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Find the random positive number between <span id="min">0</span> and <span id="max">1000</span></h1>
-    <main>
+    <main class="main">
+        <h1>Find the random positive number between <span id="min">0</span> and <span id="max">1000</span></h1>
     <div>Verif counter : <span id="nbVerif"></span></div>
     <div id="output">Find the number :</div>
     <input autofocus id="input" type="number" placeholder="enter a number">
     </input>
     <br>
     <div class="twoButtons">
-        <button id="decrease" onclick="decreaseInput()">-</button>
-        <button id="increase" onclick="increaseInput()">+</button>
+        <button class="button" id="decrease" onclick="decreaseInput()">-</button>
+        <button class="button" id="increase" onclick="increaseInput()">+</button>
     </div>
     <br>
     <div class="twoButtons">
-    <button onclick="document.location.reload()">Reload</button>
-    <button onclick="verifNb()">Verif</button>
+    <button class="button" onclick="document.location.reload()">Reload</button>
+    <button class="button" onclick="verifNb()">Find</button>
+    </div>
     <br>
+    <p>
     <a href="https://github.com/thomaslinux/GuessTheRandomNumberJavascript/">View source</a>
+    </p>
     <script src="script.js"></script>
     </main>
 </body>

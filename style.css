@@ -1,11 +1,21 @@
-button {
+.button {
   background-color: black;
   color: white;
   border: none;
-  margin: 20px;
-  min-height: 50px;
+  /* margin: 20px; */
+  height: 10rem;
+  font-size: 3rem;
   width: 50%;
   font-weight: bold;
+}
+
+button:hover {
+  cursor:pointer;
+}
+
+button:active {
+  background-color: rgb(255, 136, 136) ;
+  color:dark;
 }
 
 input {
@@ -25,7 +35,21 @@ br {
 
 body {
   /*https://developer.mozilla.org/fr/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element*/
-  display: grid;
   margin: 5%;
+  font-size: 2rem;
   font-family: monospace;
+  max-width: 1280px;
+  align-items: center;
 }
+
+.main {
+  display:flex;
+  flex-direction: column;
+}
+
+.twoButtons {
+  display:flex;
+  flex-direction: row;
+}
+
+
