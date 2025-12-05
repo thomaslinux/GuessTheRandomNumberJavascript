@@ -40,36 +40,20 @@ function onWheel(e) {
     
 }
 
-function multiply(number) {
+function operation(operator, number) {
     value = parseInt(input.value) || 0;
-    let result = value * number;
+    let result = 0;
+    match (operator) {
+        case '*': result = value * number; break;
+        case '+': result = value + number; break;
+        case '-': result = value - number; break;
+        case '/': result = value / number; break;
+        default: result = value;
+    }
     input.value = Math.floor(result);
     verifNb();
 }
 
-function divide(number) {
-    value = parseInt(input.value) || 0;
-    let result = value / number;
-    input.value = Math.floor(result);
-    verifNb();
-}
-
-function addNb(number) {
-    value = parseInt(input.value) || 0;
-    let result = value + number;
-    input.value = Math.floor(result);
-    verifNb();
-}
-
-function increaseInput() {
-    input.value++;
-    verif();
-}
-
-function decreaseInput() {
-    input.value--;
-    verif();
-}
 function verif() {
     // input.value = input.value.replace(/\D+/g, ''); // force numbers
 }
