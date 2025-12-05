@@ -24,8 +24,14 @@ function verifKey(e) {
     if (e.key === 'ArrowUp') {
         operation('+',1);
     }
+    if (e.key === 'ArrowRight') {
+        operation('+',MAX/20);
+    }
     if (e.key === 'ArrowDown') {
         operation('-',1);
+    }
+     if (e.key === 'ArrowLeft') {
+        operation('-',MAX/20);
     }
     
 }
