@@ -10,14 +10,16 @@ let nbVerif = 0;
 verif();
 input.addEventListener("wheel",onWheel)
 input.addEventListener("input",verif)
-// document.addEventListener('keydown',verifKey(e))
+document.addEventListener('keydown', function(e) => {
+    verifKey(e)
+});
 
 
 infoNbVerif.innerText = "0";
 
 function verifKey(e) {
     if (e.key == 'Enter') {
-        verif()
+        verif();
     }
     if (e.key == 'ArrowUp') {
         increaseInput();
