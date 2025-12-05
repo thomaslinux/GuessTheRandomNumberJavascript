@@ -32,9 +32,10 @@ function decreaseInput() {
     input.value--;
     verif();
 }
-
 function verif() {
     input.value = input.value.replace(/\D+/g, ''); // force numbers
+}
+function verifNb() {
     if (input.value === '') {
         // input.value = '0'
         output.innerText = "Find the number :"

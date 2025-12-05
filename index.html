@@ -14,10 +14,14 @@
     <input autofocus id="input" type="number" placeholder="enter a number">
     </input>
     <br>
-    <button id="increase" onclick="increaseInput()">+</button>
-    <button id="decrease" onclick="decreaseInput()">-</button>
+    <div class="twoButtons">
+        <button id="decrease" onclick="decreaseInput()">-</button>
+        <button id="increase" onclick="increaseInput()">+</button>
+    </div>
     <br>
+    <div class="twoButtons">
     <button onclick="document.location.reload()">Reload</button>
+    <button onclick="verifNb()">Verif</button>
     <br>
     <a href="https://github.com/thomaslinux/GuessTheRandomNumberJavascript/">View source</a>
     <script src="script.js"></script>
