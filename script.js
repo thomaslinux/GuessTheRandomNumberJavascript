@@ -14,7 +14,7 @@ input.addEventListener("input",verif)
     verifKey(e)
 });*/
 
-
+input.value = MAX;
 infoNbVerif.innerText = "0";
 
 function verifKey(e) {
@@ -41,13 +41,15 @@ function onWheel(e) {
 }
 
 function multiplyTwo() {
-    let multiply = parseInt((input.value+1) * 2,10);
-    input.value = multiply;
+    let multiply = parseInt((input.value+1) * 2, 10);
+    input.value = Math.floor(multiply);
+    verifNb();
 }
 
 function divideTwo() {
-    let divide = parseInt((input.value+1) / 2,10);
-    input.value = divide;
+    let divide = parseInt((input.value+1) / 2, 10);
+    input.value = Math.floor(divide);
+    verifNb();
 }
 
 function increaseInput() {
