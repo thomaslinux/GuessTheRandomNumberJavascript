@@ -55,7 +55,7 @@ function operation(operator, number) {
 }
 
 function verif() {
-    // input.value = input.value.replace(/\D+/g, ''); // force numbers
+    input.value = input.value.replace(/\D+/g, ''); // force numbers
 }
 function verifNb() {
     if (input.value === '') {
