@@ -10,8 +10,23 @@ let nbVerif = 0;
 verif();
 input.addEventListener("wheel",onWheel)
 input.addEventListener("input",verif)
+document.addEventListener('keydown',verifKey(e))
+
 
 infoNbVerif.innerText = "0";
+
+function verifKey(e) {
+    if (e.key == 'Enter') {
+        verif()
+    }
+    if (e.key == 'ArrowUp') {
+        increaseInput();
+    }
+    if (e.key == 'ArrowDown') {
+        decreaseInput();
+    }
+    
+}
 
 function onWheel(e) {
     e.preventDefault();
