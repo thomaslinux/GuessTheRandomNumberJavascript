@@ -115,7 +115,7 @@ h1 {
     <a href="https://github.com/thomaslinux/GuessTheRandomNumberJavascript/">View source</a>
     </p>
     <script>
-      const MIN = 0;
+const MIN = 0;
 const MAX = 1000;
 
 const output = document.getElementById("output");
@@ -127,22 +127,28 @@ let nbVerif = 0;
 verif();
 input.addEventListener("wheel",onWheel)
 input.addEventListener("input",verif)
-/*document.addEventListener('keydown', function(e) => {
-    verifKey(e)
-});*/
+
 
 input.value = MAX;
 infoNbVerif.innerText = "0";
-
+document.addEventListener('keydown', function(e) {
+    verifKey(e)
+});
 function verifKey(e) {
-    if (e.key == 'Enter') {
-        verif();
+    if (e.key === 'Enter') {
+        verifNb();
     }
-    if (e.key == 'ArrowUp') {
-        increaseInput();
+    if (e.key === 'ArrowUp') {
+        operation('+',1);
     }
-    if (e.key == 'ArrowDown') {
-        decreaseInput();
+    if (e.key === 'ArrowRight') {
+        operation('+',MAX/20);
+    }
+    if (e.key === 'ArrowDown') {
+        operation('-',1);
+    }
+     if (e.key === 'ArrowLeft') {
+        operation('-',MAX/20);
     }
     
 }
@@ -157,38 +163,22 @@ function onWheel(e) {
     
 }
 
-function multiply(number) {
-    value = parseInt(input.value) || 0;
-    let result = value * number;
+function operation(operator, number) {
+    let value = parseInt(input.value) || 0;
+    let result = 0;
+    switch (operator) {
+        case '*' : result = value * number; break;
+        case '+' : result = value + number; break;
+        case '-' : result = value - number; break;
+        case '/' : value != 0 ? result = value / number : result = value; break;
+        default : result = value; break;
+    }
     input.value = Math.floor(result);
     verifNb();
 }
 
-function divide(number) {
-    value = parseInt(input.value) || 0;
-    let result = value / number;
-    input.value = Math.floor(result);
-    verifNb();
-}
-
-function addNb(number) {
-    value = parseInt(input.value) || 0;
-    let result = value + number;
-    input.value = Math.floor(result);
-    verifNb();
-}
-
-function increaseInput() {
-    input.value++;
-    verif();
-}
-
-function decreaseInput() {
-    input.value--;
-    verif();
-}
 function verif() {
-    // input.value = input.value.replace(/\D+/g, ''); // force numbers
+    input.value = input.value.replace(/\D+/g, ''); // force numbers
 }
 function verifNb() {
     if (input.value === '') {
