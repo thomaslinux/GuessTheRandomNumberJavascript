@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find the number</title>
     <style>
-      .button {
+.button {
   background-color: black;
   color: white;
   border: none;
@@ -67,6 +67,10 @@ h1 {
   display:flex;
   flex-direction: row;
 }
+
+        #reload {
+            background-color: red;
+        }
     </style>
 </head>
 <body>
@@ -103,7 +107,7 @@ h1 {
     </div>
     <br>
     <div class="twoButtons">
-    <button class="button" onclick="document.location.reload()">Reload</button>
+    <button class="button" id="reload" onclick="document.location.reload()">New Game</button>
     <button class="button" onclick="verifNb()">Find</button>
     </div>
     <br>
