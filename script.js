@@ -41,12 +41,12 @@ function onWheel(e) {
 }
 
 function multiplyTwo() {
-    let multiply = (input.value+1) * 2;
+    let multiply = parseInt((input.value+1) * 2,10);
     input.value = multiply;
 }
 
 function divideTwo() {
-    let divide = (input.value+1) / 2;
+    let divide = parseInt((input.value+1) / 2,10);
     input.value = divide;
 }
 
