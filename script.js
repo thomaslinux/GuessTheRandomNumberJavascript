@@ -41,14 +41,14 @@ function onWheel(e) {
 }
 
 function multiplyTwo() {
-    value = parseInt((input.value), 10) || 0;
+    value = parseInt(input.value) || 0;
     let multiply = value * 2;
     input.value = Math.floor(multiply);
     verifNb();
 }
 
 function divideTwo() {
-    value = parseInt((input.value), 10) || 0;
+    value = parseInt(input.value) || 0;
     let divide = value / 2;
     input.value = Math.floor(divide);
     verifNb();
