@@ -42,15 +42,22 @@ function onWheel(e) {
 
 function multiply(number) {
     value = parseInt(input.value) || 0;
-    let multiply = value * number;
-    input.value = Math.floor(multiply);
+    let result = value * number;
+    input.value = Math.floor(result);
     verifNb();
 }
 
 function divide(number) {
     value = parseInt(input.value) || 0;
-    let divide = value / number;
-    input.value = Math.floor(divide);
+    let result = value / number;
+    input.value = Math.floor(result);
+    verifNb();
+}
+
+function addNb(number) {
+    value = parseInt(input.value) || 0;
+    let result = value + number;
+    input.value = Math.floor(result);
     verifNb();
 }
 
