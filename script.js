@@ -10,22 +10,22 @@ let nbVerif = 0;
 verif();
 input.addEventListener("wheel",onWheel)
 input.addEventListener("input",verif)
-/*document.addEventListener('keydown', function(e) => {
-    verifKey(e)
-});*/
+
 
 input.value = MAX;
 infoNbVerif.innerText = "0";
-
+document.addEventListener('keydown', function(e) {
+    verifKey(e)
+});
 function verifKey(e) {
-    if (e.key == 'Enter') {
-        verif();
+    if (e.key === 'Enter') {
+        verifNb();
     }
-    if (e.key == 'ArrowUp') {
-        increaseInput();
+    if (e.key === 'ArrowUp') {
+        operation('+',1);
     }
-    if (e.key == 'ArrowDown') {
-        decreaseInput();
+    if (e.key === 'ArrowDown') {
+        operation('-',1);
     }
     
 }
