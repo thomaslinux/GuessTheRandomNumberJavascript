@@ -40,16 +40,16 @@ function onWheel(e) {
     
 }
 
-function multiplyTwo() {
+function multiply(number) {
     value = parseInt(input.value) || 0;
-    let multiply = value * 2;
+    let multiply = value * number;
     input.value = Math.floor(multiply);
     verifNb();
 }
 
-function divideTwo() {
+function divide(number) {
     value = parseInt(input.value) || 0;
-    let divide = value / 2;
+    let divide = value / number;
     input.value = Math.floor(divide);
     verifNb();
 }
