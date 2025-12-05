@@ -9,6 +9,9 @@ button {
   font-weight: bold;
 }
 
+input {
+  height: 3rem;
+}
 
 br {
  height: 2rem;
