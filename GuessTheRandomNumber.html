@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the number</title>
+    <style>
+.button {
+  background-color: black;
+  color: white;
+  border: none;
+  /* margin: 20px; */
+  height: 4rem;
+  font-size: 2rem;
+  width: 50%;
+  font-weight: bold;
+}
+
+button:hover {
+  cursor:pointer;
+}
+
+button:active {
+  background-color: rgb(255, 136, 136) ;
+  color:dark;
+}
+
+input {
+  height: 3rem;
+  text-align: center;
+  font-size: 2rem;
+  border: none;
+  background-color: grey;
+}
+
+br {
+ height: 2rem;
+}
+#increase {
+  background-color: green !important;
+}
+
+#decrease {
+  background-color: red !important;
+}
+
+body {
+  /*https://developer.mozilla.org/fr/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element*/
+  margin: 5%;
+  font-size: 1.5rem;
+  font-family: monospace;
+  max-width: 1280px;
+  align-items: center;
+}
+
+h1 {
+    font-size:2rem;
+}
+        
+.main {
+  display:flex;
+  flex-direction: column;
+    height: 100%;
+}
+
+.twoButtons {
+  display:flex;
+  flex-direction: row;
+}
+
+        #reload {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <main class="main">
+        <h1>Find the random positive number between <span id="min">0</span> and <span id="max">1000</span></h1>
+    <div>Verif counter : <span id="nbVerif"></span></div>
+    <div id="output">Find the number :</div>
+    <input autofocus id="input" type="number" placeholder="enter a number">
+    </input>
+    <br>
+    <div class="twoButtons">
+        <button class="button" id="divideByTwo" onclick="divide(2)">/2</button>
+        <button class="button" id="multiplyByTwo" onclick="multiply(2)">x2</button>
+    </div>
+        <br>
+    <div class="twoButtons">
+        <button class="button" id="divideByThree" onclick="divide(3)">/3</button>
+        <button class="button" id="multiplyByThree" onclick="multiply(1.5)">x1.5</button>
+    </div>
+    <br>
+    <div class="twoButtons">
+        <button class="button" id="decrease" onclick="addNb(-50)">-50</button>
+        <button class="button" id="increase" onclick="addNb(50)">+50</button>
+    </div>
+        <br>
+    <div class="twoButtons">
+        <button class="button" id="decrease" onclick="addNb(-5)">-5</button>
+        <button class="button" id="increase" onclick="addNb(5)">+5</button>
+    </div>
+        <br>
+    <div class="twoButtons">
+        <button class="button" id="decrease" onclick="addNb(-1)">-1</button>
+        <button class="button" id="increase" onclick="addNb(1)">+1</button>
+    </div>
+    <br>
+    <div class="twoButtons">
+    <button class="button" id="reload" onclick="document.location.reload()">New Game</button>
+    <button class="button" onclick="verifNb()">Find</button>
+    </div>
+    <br>
+    <p>
+    <a href="https://github.com/thomaslinux/GuessTheRandomNumberJavascript/">View source</a>
+    </p>
+    <script>
+      const MIN = 0;
+const MAX = 1000;
+
+const output = document.getElementById("output");
+const input = document.getElementById("input");
+const infoNbVerif = document.getElementById("nbVerif");
+
+let nbToFind = alea(MIN,MAX);
+let nbVerif = 0;
+verif();
+input.addEventListener("wheel",onWheel)
+input.addEventListener("input",verif)
+/*document.addEventListener('keydown', function(e) => {
+    verifKey(e)
+});*/
+
+input.value = MAX;
+infoNbVerif.innerText = "0";
+
+function verifKey(e) {
+    if (e.key == 'Enter') {
+        verif();
+    }
+    if (e.key == 'ArrowUp') {
+        increaseInput();
+    }
+    if (e.key == 'ArrowDown') {
+        decreaseInput();
+    }
+    
+}
+
+function onWheel(e) {
+    e.preventDefault();
+    if (e.deltaY > 0) { // on scroll down
+        decreaseInput();
+    } else if (e.deltaY < 0) { // on scroll up
+        increaseInput();
+    }
+    
+}
+
+function multiply(number) {
+    value = parseInt(input.value) || 0;
+    let result = value * number;
+    input.value = Math.floor(result);
+    verifNb();
+}
+
+function divide(number) {
+    value = parseInt(input.value) || 0;
+    let result = value / number;
+    input.value = Math.floor(result);
+    verifNb();
+}
+
+function addNb(number) {
+    value = parseInt(input.value) || 0;
+    let result = value + number;
+    input.value = Math.floor(result);
+    verifNb();
+}
+
+function increaseInput() {
+    input.value++;
+    verif();
+}
+
+function decreaseInput() {
+    input.value--;
+    verif();
+}
+function verif() {
+    // input.value = input.value.replace(/\D+/g, ''); // force numbers
+}
+function verifNb() {
+    if (input.value === '') {
+        // input.value = '0'
+        output.innerText = "Find the number :"
+    } else if (input.value > nbToFind) {
+        output.innerText = "Number to find is less than " + input.value;
+    } else if (input.value < nbToFind) {
+        output.innerText = "Number to find is more than " + input.value;
+    } else {
+        output.innerText = "You guessed right !"
+    }
+    nbVerif++;
+    infoNbVerif.innerText = nbVerif;
+}
+
+/**
+ * @param {Number} MIN valeur minimum du nombre aléatoire (inclue)
+ * @param {Number} MAX valeur maximum du nombre aléatoire (excluse)
+ * @returns {Number} un entier aléatoire entre une valeur MIN (inclue) et une valeur MAX (exclue)
+ */
+function alea(MIN,MAX) {
+    return Math.floor(Math.random()*(MAX-MIN)+ MIN);
+}
+    </script>
+    </main>
+</body>
+</html>
