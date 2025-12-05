@@ -38,6 +38,14 @@ function onWheel(e) {
     
 }
 
+function multiplyTwo() {
+    input.value = input.value * 2;
+}
+
+function divideTwo() {
+    input.value = input.value / 2;
+}
+
 function increaseInput() {
     input.value++;
     verif();
