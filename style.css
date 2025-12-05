@@ -3,8 +3,8 @@
   color: white;
   border: none;
   /* margin: 20px; */
-  height: 10rem;
-  font-size: 3rem;
+  height: 4rem;
+  font-size: 2rem;
   width: 50%;
   font-weight: bold;
 }
@@ -20,6 +20,7 @@ button:active {
 
 input {
   height: 3rem;
+  text-align: center;
 }
 
 br {
@@ -36,7 +37,7 @@ br {
 body {
   /*https://developer.mozilla.org/fr/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element*/
   margin: 5%;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: monospace;
   max-width: 1280px;
   align-items: center;
