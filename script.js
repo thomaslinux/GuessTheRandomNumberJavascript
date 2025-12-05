@@ -10,9 +10,9 @@ let nbVerif = 0;
 verif();
 input.addEventListener("wheel",onWheel)
 input.addEventListener("input",verif)
-document.addEventListener('keydown', function(e) => {
+/*document.addEventListener('keydown', function(e) => {
     verifKey(e)
-});
+});*/
 
 
 infoNbVerif.innerText = "0";
@@ -41,11 +41,13 @@ function onWheel(e) {
 }
 
 function multiplyTwo() {
-    input.value = input.value++ * 2;
+    let multiply = (input.value+1) * 2;
+    input.value = multiply;
 }
 
 function divideTwo() {
-    input.value = input.value++ / 2;
+    let divide = (input.value+1) / 2;
+    input.value = divide;
 }
 
 function increaseInput() {
