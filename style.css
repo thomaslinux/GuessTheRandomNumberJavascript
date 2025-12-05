@@ -21,6 +21,9 @@ button:active {
 input {
   height: 3rem;
   text-align: center;
+  font-size: 2rem;
+  border: none;
+  background-color: grey;
 }
 
 br {
