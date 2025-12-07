@@ -7,9 +7,12 @@ const infoNbVerif = document.getElementById("nbVerif");
 //const reloadButton = document.getElementById("reload");
 //document.addEventListener('click', (e) => {init();});
 
-function init() {
-let nbToFind = alea(MIN,MAX);
+
+let nbToFind = 0;
 let nbVerif = 0;
+function init() {
+nbToFind = alea(MIN,MAX);
+nbVerif = 0;
 verif();
 input.value = MAX;
 infoNbVerif.innerText = "0";
