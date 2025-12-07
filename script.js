@@ -10,14 +10,11 @@ const infoNbVerif = document.getElementById("nbVerif");
 
 let nbToFind = 0;
 let nbVerif = 0;
-function init() {
 nbToFind = alea(MIN,MAX);
 nbVerif = 0;
 verif();
 input.value = MAX;
 infoNbVerif.innerText = "0";
-}
-init();
 input.addEventListener("wheel",onWheel)
 input.addEventListener("input",verif)
 
