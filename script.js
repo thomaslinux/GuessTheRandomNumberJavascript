@@ -4,10 +4,8 @@ const MAX = 1000;
 const output = document.getElementById("output");
 const input = document.getElementById("input");
 const infoNbVerif = document.getElementById("nbVerif");
-const reloadButton = document.getElementById("reload");
-document.addEventListener('click', (e) => {
-    init();
-});
+//const reloadButton = document.getElementById("reload");
+//document.addEventListener('click', (e) => {init();});
 
 function init() {
 let nbToFind = alea(MIN,MAX);
