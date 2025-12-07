@@ -4,18 +4,26 @@ const MAX = 1000;
 const output = document.getElementById("output");
 const input = document.getElementById("input");
 const infoNbVerif = document.getElementById("nbVerif");
+const reloadButton = document.getElementById("reload");
+document.addEventListener('click', (e) => {
+    init();
+});
 
+function init() {
 let nbToFind = alea(MIN,MAX);
 let nbVerif = 0;
 verif();
+input.value = MAX;
+infoNbVerif.innerText = "0";
+}
+init();
 input.addEventListener("wheel",onWheel)
 input.addEventListener("input",verif)
 
 
-input.value = MAX;
-infoNbVerif.innerText = "0";
+
 document.addEventListener('keydown', function(e) {
-    verifKey(e)
+    verifKey(e);
 });
 function verifKey(e) {
     if (e.key === 'Enter') {
