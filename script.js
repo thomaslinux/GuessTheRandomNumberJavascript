@@ -4,6 +4,7 @@ const MAX = 1000;
 const output = document.getElementById("output");
 const input = document.getElementById("input");
 const infoNbVerif = document.getElementById("nbVerif");
+document.getElementById("version").innerText = "v2025-12-07-20h01"
 //const reloadButton = document.getElementById("reload");
 //document.addEventListener('click', (e) => {init();});
 
@@ -12,9 +13,9 @@ let nbToFind = 0;
 let nbVerif = 0;
 nbToFind = alea(MIN,MAX);
 nbVerif = -1;
-verifNb();
 verif();
 input.value = MAX;
+verifNb();
 infoNbVerif.innerText = "0";
 input.addEventListener("wheel",onWheel)
 input.addEventListener("input",verif)
