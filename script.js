@@ -11,7 +11,8 @@ const infoNbVerif = document.getElementById("nbVerif");
 let nbToFind = 0;
 let nbVerif = 0;
 nbToFind = alea(MIN,MAX);
-nbVerif = 0;
+nbVerif = -1;
+verifNb();
 verif();
 input.value = MAX;
 infoNbVerif.innerText = "0";
@@ -72,11 +73,11 @@ function verif() {
 function verifNb() {
     if (input.value === '') {
         // input.value = '0'
-        output.innerText = "Find the number :"
+        output.innerText = "Guess the number !"
     } else if (input.value > nbToFind) {
-        output.innerText = "Number to find is less than " + input.value;
+        output.innerText = "Number is less than " + input.value;
     } else if (input.value < nbToFind) {
-        output.innerText = "Number to find is more than " + input.value;
+        output.innerText = "Number is more than " + input.value;
     } else {
         output.innerText = "You guessed right !"
     }
