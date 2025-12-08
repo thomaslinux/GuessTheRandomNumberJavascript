@@ -3,8 +3,8 @@
   color: white;
   border: none;
   /* margin: 20px; */
-  height: 3rem;
-  font-size: 1.5rem;
+  height: 3.5rem;
+  font-size: 1.8rem;
   width: 50%;
   font-weight: bold;
 }
@@ -40,7 +40,7 @@ br {
 body {
   /*https://developer.mozilla.org/fr/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element*/
   margin: 5%;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-family: monospace;
   max-width: 1280px;
   align-items: center;
