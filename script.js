@@ -29,15 +29,11 @@ function verifKey(e) {
     if (e.key === 'Enter') {
         verifNb();
     }
-    if (e.key === 'ArrowUp') {
-        operation('+',1);
-    }
+    //if (e.key === 'ArrowUp') {operation('+',1);}
     if (e.key === 'ArrowRight') {
         operation('+',MAX/20);
     }
-    if (e.key === 'ArrowDown') {
-        operation('-',1);
-    }
+    //if (e.key === 'ArrowDown') {operation('-',1);}
      if (e.key === 'ArrowLeft') {
         operation('-',MAX/20);
     }
@@ -77,8 +73,10 @@ function verifNb() {
         output.innerText = "Guess the number !"
     } else if (input.value > nbToFind) {
         output.innerText = "Number is less than " + input.value;
+        document.getElementById("max").innerText = input.value;
     } else if (input.value < nbToFind) {
         output.innerText = "Number is more than " + input.value;
+        document.getElementById("min").innerText = input.value;
     } else {
         output.innerText = "You guessed right !"
     }
