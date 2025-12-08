@@ -4,7 +4,7 @@ const MAX = 1000;
 const output = document.getElementById("output");
 const input = document.getElementById("input");
 const infoNbVerif = document.getElementById("nbVerif");
-document.getElementById("version").innerText = "v2025-12-08-21h04"
+//document.getElementById("version").innerText = "v2025-12-08-21h04"
 //const reloadButton = document.getElementById("reload");
 //document.addEventListener('click', (e) => {init();});
 
