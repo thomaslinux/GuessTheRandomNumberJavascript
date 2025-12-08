@@ -72,10 +72,10 @@ function verifNb() {
         // input.value = '0'
         output.innerText = "Guess the number !"
     } else if (input.value > nbToFind) {
-        output.innerText = "Number is less than " + input.value;
+        output.innerText = "Number < " + input.value;
         document.getElementById("max").innerText = input.value;
     } else if (input.value < nbToFind) {
-        output.innerText = "Number is more than " + input.value;
+        output.innerText = "Number > " + input.value;
         document.getElementById("min").innerText = input.value;
     } else {
         output.innerText = "You guessed right !"
