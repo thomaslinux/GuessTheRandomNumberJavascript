@@ -1,0 +1,27 @@
+.button {
+	/* background-color: black; */
+	/* color: white; */
+	/* border: none; */
+	/* margin: 20px; */
+	height: 4rem;
+	font-size: 1.8rem;
+	width: 50%;
+	/* font-weight: bold; */
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: monospace;
+}
+
+input {
+	height: 4rem;
+	text-align: center;
+	font-size: 2rem;
+	/* border: none; */
+	/* background-color: grey; */
+}
+
+h1 {
+	font-size: 2rem;
+}
