@@ -15,27 +15,26 @@
     <input autofocus="false" class="input" id="input" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="enter a number">
     </input>
     <div class="twoButtons">
-        <button class="button" id="divideByTwo" onclick="operation('/',2)">/ 2  </button>
-        <button class="button" onclick="operation('*',1.5)">x 1.5</button>
+        <button class="button" id="divide" onclick="operation('/',2)">/ 2  </button>
+        <button class="button" id="multiply" onclick="operation('*',1.5)">x 1.5</button>
     </div>
     <div class="twoButtons">
-        <button class="button" onclick="operation('-',75)">- 75</button>
-        <button class="button" id="multiplyByThree" onclick="operation('+',125)">+125</button>
+        <button class="button" id="-MAX/200*15" onclick="operation('-',75)">- 75</button>
+        <button class="button" id="+MAX/200*25" onclick="operation('+',125)">+125</button>
     </div>
     <div class="twoButtons">
-        <button class="button" onclick="operation('-',25)">- 25</button>
-        <button class="button" onclick="operation('+',50)">+ 50</button>
+        <button class="button" id="-MAX/200*5" onclick="operation('-',25)">- 25</button>
+        <button class="button" id="+MAX/200*10" onclick="operation('+',50)">+ 50</button>
     </div>
     <div class="twoButtons">
-        <button class="button" onclick="operation('-',5)">-  5</button>
-        <button class="button" onclick="operation('+',10)">+ 10</button>
+        <button class="button" id="-MAX/200" onclick="operation('-',5)">- 5</button>
+        <button class="button" id="-MAX/200*2" onclick="operation('+',10)">+ 10</button>
     </div>
     <div class="twoButtons">
-        <button class="button" onclick="operation('-',1)">-  1</button>
-        <button class="button" onclick="operation('+',1)">+  1</button>
+        <button class="button" id="-MAX/200/5" onclick="operation('-',1)">- 1</button>
+        <button class="button" id="+MAX/200/5" onclick="operation('+',1)">+ 1</button>
     </div>
     <div class="twoButtons">
-    <!-- <button class="button" id="reload" onclick="document.location.reload()">New Game</button> -->
     <button class="button" id="reload">New Game</button>
     <button class="button" onclick="verifNb()">Enter</button>
     </div>
