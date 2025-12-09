@@ -1,26 +1,37 @@
 const MIN = 0;
 const MAX = 1000;
-
+let nbToFind = 0;
+let nbVerif = 0;
 const output = document.getElementById("output");
 const input = document.getElementById("input");
 const infoNbVerif = document.getElementById("nbVerif");
-//document.getElementById("version").innerText = "v2025-12-08-21h04"
-//const reloadButton = document.getElementById("reload");
-//document.addEventListener('click', (e) => {init();});
+const htmlMIN = document.getElementById("min");
+const htmlMAX = document.getElementById("max");
+const reload = document.getElementById("reload");
+reload.addEventListener('click', (e) => {init();});
+window.onload=init;
 
-
-let nbToFind = 0;
-let nbVerif = 0;
-nbToFind = alea(MIN,MAX);
-nbVerif = -1;
-verif();
-input.value = MAX;
-verifNb();
-infoNbVerif.innerText = "0";
-input.addEventListener("wheel",onWheel)
-input.addEventListener("input",verif)
-
-
+function init () {
+    htmlMIN.innerText = MIN;
+    htmlMAX.innerText = MAX;
+    nbToFind = alea(MIN,MAX);
+    nbVerif = -1;
+    verif();
+    input.value = MAX;
+    verifNb();
+    infoNbVerif.innerText = "0";
+    input.addEventListener("input",verif)
+    input.addEventListener("wheel",onWheel)
+    function onWheel(e) {
+    e.preventDefault();
+    if (e.deltaY > 0) { // on scroll down
+        decreaseInput();
+    } else if (e.deltaY < 0) { // on scroll up
+        increaseInput();
+    }
+    
+}
+}
 
 document.addEventListener('keydown', function(e) {
     verifKey(e);
@@ -40,15 +51,7 @@ function verifKey(e) {
     
 }
 
-function onWheel(e) {
-    e.preventDefault();
-    if (e.deltaY > 0) { // on scroll down
-        decreaseInput();
-    } else if (e.deltaY < 0) { // on scroll up
-        increaseInput();
-    }
-    
-}
+
 
 function operation(operator, number) {
     let value = parseInt(input.value) || 0;
@@ -71,12 +74,12 @@ function verifNb() {
     if (input.value === '') {
         // input.value = '0'
         output.innerText = "Guess the number !"
-    } else if (input.value > nbToFind) {
-        output.innerText = "Number < " + input.value;
-        document.getElementById("max").innerText = input.value;
-    } else if (input.value < nbToFind) {
+    } else if (nbToFind > input.value) {
         output.innerText = "Number > " + input.value;
-        document.getElementById("min").innerText = input.value;
+        htmlMIN.innerText = input.value;
+    } else if (nbToFind < input.value) {
+        output.innerText = "Number < " + input.value;
+        htmlMAX.innerText = input.value;
     } else {
         output.innerText = "You guessed right !"
     }
