@@ -9,7 +9,8 @@ const htmlMIN = document.getElementById("min");
 const htmlMAX = document.getElementById("max");
 const reload = document.getElementById("reload");
 reload.addEventListener('click', (e) => { init(); });
-window.onload = init;
+// window.onload = init;
+init();
 
 function init() {
     htmlMIN.innerText = MIN;
