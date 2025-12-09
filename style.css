@@ -22,13 +22,14 @@ button:active {
   color:dark;
 }
 
-input {
+.input {
   height: 4rem;
   text-align: center;
   font-size: 2rem;
   border: none;
   background-color: lightgray;
   font-weight: bold;
+  width: 100%;
 }
 
 br {
