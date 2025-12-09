@@ -15,7 +15,7 @@ https://previewhtml.github.io/?url=https%3A%2F%2Fgithub.com%2Fthomaslinux%2FGues
 
 - [x] init function for faster reload when click on New Game
 
-- [x] A better way to handle input of a number - "<input type="text" inputmode="numeric" pattern="[0-9]*">"
+- [x] A better way to handle input of a number - ```<input type="text" inputmode="numeric" pattern="[0-9]*">```
 
 - [ ] How to play section - To explain how to play from text instead of explaining manually
 
