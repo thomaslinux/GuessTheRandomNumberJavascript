@@ -11,7 +11,8 @@
         <h1>Guess the number </br> between <span id="min">0</span> and <span id="max">1000</span></h1>
     <div>Score : <span id="nbVerif"></span></div>
     <div id="output">Guess the number :</div>
-    <input autofocus="false" id="input" type="number" placeholder="enter a number">
+    <!-- <a href="https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-worst-input/">https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-worst-input/</a> -->
+    <input autofocus="false" id="input" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="enter a number">
     </input>
     <div class="twoButtons">
         <button class="button" id="divideByTwo" onclick="operation('/',2)">/2</button>
