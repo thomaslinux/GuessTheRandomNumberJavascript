@@ -9,7 +9,7 @@
   /* margin: 20px; */
   height: 4rem;
   font-size: 1.8rem;
-  width: 50%;
+  width: 50%;  
   font-weight: bold;
 }
 
@@ -27,8 +27,8 @@ input {
   text-align: center;
   font-size: 2rem;
   border: none;
-  background-color: grey;
-  color: white;
+  background-color: lightgray;
+  font-weight: bold;
 }
 
 br {
