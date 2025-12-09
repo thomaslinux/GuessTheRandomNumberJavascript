@@ -1,5 +1,5 @@
-const MIN = 0;
-const MAX = 1000;
+let MIN = 0;
+let MAX = 1000;
 let nbToFind = 0;
 let nbVerif = 0;
 const output = document.getElementById("output");
