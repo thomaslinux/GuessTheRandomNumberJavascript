@@ -13,8 +13,8 @@ reload.addEventListener('click', (e) => { init(); });
 init();
 
 function init() {
-    htmlMIN.innerText = MIN;
-    htmlMAX.innerText = MAX;
+    htmlMIN.value = MIN;
+    htmlMAX.value = MAX;
     nbToFind = alea(MIN, MAX);
     nbVerif = -1;
     verif();
@@ -73,14 +73,14 @@ function verifNb() {
         output.innerText = "Guess the number !"
     } else if (nbToFind > input.value) {
         output.innerText = "Number > " + input.value;
-        htmlMIN.innerText = input.value;
+        htmlMIN.value = input.value;
     } else if (nbToFind < input.value) {
         output.innerText = "Number < " + input.value;
-        htmlMAX.innerText = input.value;
+        htmlMAX.value = input.value;
     } else {
         output.innerText = "You guessed right ! You Win !"
-        htmlMIN.innerText = input.value;
-        htmlMAX.innerText = input.value;
+        htmlMIN.value = input.value;
+        htmlMAX.value = input.value;
     }
     nbVerif++;
     infoNbVerif.innerText = nbVerif;
