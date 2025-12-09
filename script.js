@@ -82,7 +82,9 @@ function verifNb() {
         output.innerText = "Number < " + input.value;
         htmlMAX.innerText = input.value;
     } else {
-        output.innerText = "You guessed right !"
+        output.innerText = "You guessed right ! You Win !"
+        htmlMIN.innerText = input.value;
+        htmlMAX.innerText = input.value;
     }
     nbVerif++;
     infoNbVerif.innerText = nbVerif;
