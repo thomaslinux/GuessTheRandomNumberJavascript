@@ -16,12 +16,12 @@
   box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.5);
 }
 
-button:hover {
+.button:hover {
   cursor: pointer;
   background-color: hsl(108, 29%, 71%);
 }
 
-button:active {
+.button:active {
   background-color: rgb(255, 136, 136);
   color: dark;
 }
@@ -40,7 +40,7 @@ button:active {
   box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.5);
 }
 
-input {
+.input {
   height: 4rem;
   text-align: center;
   font-size: 2rem;
@@ -56,11 +56,11 @@ input {
   box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.5);
 }
 
-input:hover {
+.input:hover {
   background-color: hsl(175, 87%, 25%);
 }
 
-input:focus {
+.input:focus {
   border: hidden;
 }
 
