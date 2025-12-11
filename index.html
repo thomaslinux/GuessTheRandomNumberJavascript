@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Guess the random number">
     <title>Find the number</title>
     <link rel="stylesheet" href="stylev2.css">
 </head>
@@ -11,49 +13,49 @@
 <body>
     <main class="main">
         <!-- <a href="https://css-tricks.com/auto-growing-inputs-textareas/#aa-non-input-elements-expand-naturally"></a> -->
-        <h1>Guess the number </br> between
-            <span id="min" class="input" role="textbox" contenteditable inputmode="numeric" pattern="[0-9]*">0</span>
+        <h1 title="Guess the number randomly chosen between MIN and MAX">Guess the number </br> between
+            <span title="MIN / minimal possible Number" id="min" class="input" role="textbox" contenteditable inputmode="numeric" pattern="[0-9]*">0</span>
             and
-            <span id="max" class="input" role="textbox" contenteditable inputmode="numeric" pattern="[0-9]*">1000</span>
+            <span title="MAX / maximal possible Number" id="max" class="input" role="textbox" contenteditable inputmode="numeric" pattern="[0-9]*">1000</span>
         </h1>
         <div id="table-jeu">
             <div id="indicateurs">
-                <div>Score : <span id="nbVerif"></span></div>
-                <div id="output">Guess the number :</div>
+                <div title="Lower score is better">Verifs : <span id="nbVerif"></span></div>
+                <div title="Information about your current guess" id="output">Guess the number :</div>
             </div>
-            <!-- <a href="https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-worst-input/#:~:text=The%20Gov%2EUK%20article%20mentions%20a%20possible%20solution%3A%20Using%20%3Cinput%20type%3D%22text%22%20inputmode%3D%22numeric%22%20pattern%3D%22%5B0%2D9%5D%2A%22%3E%20is%20a%20nice%20option%20for%20integers%2C%20but%20it%20won%E2%80%99t%20work%20for%20floating%20point%20decimal%20numbers">https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-worst-input/</a> -->
+            <!-- <a href="https://stackoverflow.blog/2022/12/26/why-the-Number - input-is-the-worst-input/#:~:text=The%20Gov%2EUK%20article%20mentions%20a%20possible%20solution%3A%20Using%20%3Cinput%20type%3D%22text%22%20inputmode%3D%22numeric%22%20pattern%3D%22%5B0%2D9%5D%2A%22%3E%20is%20a%20nice%20option%20for%20integers%2C%20but%20it%20won%E2%80%99t%20work%20for%20floating%20point%20decimal%20numbers">https://stackoverflow.blog/2022/12/26/why-the-Number - input-is-the-worst-input/</a> -->
             <input autofocus="false" class="input" id="input" type="text" inputmode="numeric" pattern="[0-9]*"
-                placeholder="enter a number">
+                placeholder="enter a number" title="Enter a number or use the buttons">
             </input>
             <div id="plateau-boutons">
                 <div class="twoButtons">
-                    <button class="button" id="divide" onclick="operation('/',2)">/ 2 </button>
-                    <button class="button" id="multiply" onclick="operation('*',1.5)">x 1.5</button>
+                    <button class="button" title="Number / 2" id="divide" onclick="operation('/',2)">/ 2 </button>
+                    <button class="button" title="Number x 1.5" id="multiply" onclick="operation('*',1.5)">x 1.5</button>
                 </div>
                 <div class="twoButtons">
-                    <button class="button" title="Number-MAX/200*15" id="button1" onclick="operation('-',75)">- 75</button>
-                    <button class="button" title="Number+MAX/200*25" id="button2"  onclick="operation('+',125)">+125</button>
+                    <button class="button" title="Number - MAX/200*15" id="button1" onclick="operation('-',75)">- 75</button>
+                    <button class="button" title="Number + MAX/200*25" id="button2"  onclick="operation('+',125)">+125</button>
                 </div>
                 <div class="twoButtons">
-                    <button class="button" title="Number-MAX/200*5" id="button3" onclick="operation('-',25)">- 25</button>
-                    <button class="button" title="Number+MAX/200*10" id="button4" onclick="operation('+',50)">+ 50</button>
+                    <button class="button" title="Number - MAX/200*5" id="button3" onclick="operation('-',25)">- 25</button>
+                    <button class="button" title="Number + MAX/200*10" id="button4" onclick="operation('+',50)">+ 50</button>
                 </div>
                 <div class="twoButtons">
-                    <button class="button" title="Number-MAX/200" id="button5" onclick="operation('-',5)">- 5</button>
-                    <button class="button" title="Number+MAX/200*2" id="button6" onclick="operation('+',10)">+ 10</button>
+                    <button class="button" title="Number - MAX/200" id="button5" onclick="operation('-',5)">- 5</button>
+                    <button class="button" title="Number + MAX/200*2" id="button6" onclick="operation('+',10)">+ 10</button>
                 </div>
                 <div class="twoButtons">
-                    <button class="button" title="Number-1" id="button7" onclick="operation('-',1)">- 1</button>
-                    <button class="button" title="Number+1" id="button8" onclick="operation('+',1)">+ 1</button>
+                    <button class="button" title="Number - 1" id="button7" onclick="operation('-',1)">- 1</button>
+                    <button class="button" title="Number + 1" id="button8" onclick="operation('+',1)">+ 1</button>
                 </div>
                 <div class="twoButtons">
-                    <button class="button" id="reload">New Game</button>
-                    <button class="button" onclick="verifNb()">Enter</button>
+                    <button class="button" title="New random number to find" id="reload">New Game</button>
+                    <button class="button" title="Press Enter or this button to verify the current input" onclick="verifNb()">Enter</button>
                 </div>
             </div>
         </div>
         <div>
-            <p id="version-source"> <span id="version">V2_2025-12-11_10:18</span>
+            <p id="version-source"> <span title="Current version of the page" id="version">V2_2025-12-11_11:43</span>
                 <a href="https://github.com/thomaslinux/GuessTheRandomNumberJavascript/">View source</a>
             </p>
         </div>
