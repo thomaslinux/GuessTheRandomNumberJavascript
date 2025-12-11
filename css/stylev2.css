@@ -26,13 +26,13 @@ button:active {
   color: dark;
 }
 
-#indicateurs {
+.indicateurs {
   display: flex;
   justify-content: space-between;
   margin: 15px 0 0 0;
 }
 
-#indicateurs div {
+.indicateurs div {
   background: linear-gradient(135deg, #6E812A, #226B2A);
   color: white;
   padding: 10px;
@@ -111,14 +111,14 @@ h1 {
   color: hsl(175, 87%, 25%)
 }
 
-#table-jeu {
+.table-jeu {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   /* border-radius: 10px; */
 }
 
-#plateau-boutons {
+.plateau-boutons {
   background: linear-gradient(135deg, #6E812A, #226B2A, #054A44);
   display: flex;
   flex-direction: column;
@@ -127,6 +127,6 @@ h1 {
   padding: 10px;
 }
 
-#version-source {
+.version-source {
   font-size: 1rem;
 }
