@@ -101,6 +101,7 @@ function verifNb() {
         wins++;
         localStorage.setItem("wins",wins);
         console.log(localStorage.getItem("wins"));
+        document.querySelector("#wins span").innerText = wins;
     }
     nbVerif++;
     infoNbVerif.innerText = nbVerif;
