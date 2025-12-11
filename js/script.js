@@ -68,17 +68,31 @@ function verif() {
     input.value = input.value.replace(/\D+/g, ''); // force numbers
 }
 function verifNb() {
+
+    // hide all elements first
+    document.querySelector("#indicator_more").style.display = "none";
+    document.querySelector("#indicator_less").style.display = "none";
+    document.querySelector("#indicator_empty").style.display = "none";
+    document.querySelector("#indicator_win").style.display = "none";
+
+    // display the element to display
     if (input.value === '') {
         // input.value = '0'
         output.innerText = "Guess the number !"
+        document.querySelector("#indicator_empty").style.display = "block";
     } else if (nbToFind > input.value) {
         output.innerText = "Number > " + input.value;
-       htmlMIN.innerText = input.value;
+        document.querySelector("#indicator_more").style.display = "block";
+        document.querySelector("#indicator_more span").innerText = input.value;
+        htmlMIN.innerText = input.value;
     } else if (nbToFind < input.value) {
         output.innerText = "Number < " + input.value;
+        document.querySelector("#indicator_less").style.display = "block";
+        document.querySelector("#indicator_less span").innerText = input.value;
         htmlMAX.innerText = input.value;
     } else {
         output.innerText = "You win !"
+        document.querySelector("#indicator_win").style.display = "block";
         htmlMIN.innerText = input.value;
         htmlMAX.innerText = input.value;
     }
