@@ -18,7 +18,7 @@ https://previewhtml.github.io/?url=https%3A%2F%2Fgithub.com%2Fthomaslinux%2FGues
 - [x] A better way to handle input of a number - ```<input type="text" inputmode="numeric" pattern="[0-9]*">```
 Found here : https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-worst-input/#:~:text=input%20type%3D%22text%22%20inputmode%3D%22numeric%22
 
-- [ ] Number of wins in LocalStorage - **Maximum priority**
+- [x] Number of wins in LocalStorage - up version to V3
 
 - [ ] Lang switch - switch between french and english (/fr/index.html /index.html ?) (javascript language agnostic ?)
 
