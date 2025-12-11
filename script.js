@@ -78,7 +78,7 @@ function verifNb() {
         output.innerText = "Number < " + input.value;
         htmlMAX.innerText = input.value;
     } else {
-        output.innerText = "You guessed right ! You Win !"
+        output.innerText = "You win !"
         htmlMIN.innerText = input.value;
         htmlMAX.innerText = input.value;
     }
