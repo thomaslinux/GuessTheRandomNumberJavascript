@@ -72,7 +72,7 @@ body {
   /*https://developer.mozilla.org/fr/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element*/
   margin: 2rem;
   font-size: 1.6rem;
-  max-width: 1280px;
+  /* max-width: 1280px; */
   align-items: center;
   display: flex;
   flex-direction: column;
