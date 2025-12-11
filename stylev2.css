@@ -1,0 +1,131 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+.button {
+  background-color: #6BA55D;
+  color: white;
+  border: none;
+  /* margin: 20px; */
+  height: 4rem;
+  font-size: 1.8rem;
+  width: 175px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 5px;
+  box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: hsl(108, 29%, 71%);
+}
+
+button:active {
+  background-color: rgb(255, 136, 136);
+  color: dark;
+}
+
+#indicateurs {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0 0 0;
+}
+
+#indicateurs div {
+  background: linear-gradient(135deg, #6E812A, #226B2A);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.5);
+}
+
+input {
+  height: 4rem;
+  text-align: center;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: #054A44;
+  font-weight: bold;
+  color: white;
+  /* width: fit-content; */
+  width: 200px;
+  margin: 15px auto;
+  box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.5);
+}
+
+input:hover {
+  background-color: hsl(175, 87%, 25%);
+}
+
+input:focus {
+  border: hidden;
+}
+
+br {
+  height: 1rem;
+}
+
+body {
+  /*https://developer.mozilla.org/fr/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element*/
+  margin: 5% auto;
+  font-size: 1.6rem;
+  max-width: 1280px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: hsl(108, 29%, 71%);
+}
+
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  /* width: 100vw; */
+  margin: auto;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: fit-content;
+}
+
+.twoButtons {
+  display: flex;
+  flex-direction: row;
+}
+
+#reload {
+  background-color: white;
+  text-wrap: nowrap;
+  color: #054A44
+}
+
+#reload:hover {
+  background-color: hsl(0, 0%, 90%);
+  color: hsl(175, 87%, 25%)
+}
+
+#table-jeu {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  /* border-radius: 10px; */
+}
+
+#plateau-boutons {
+  background: linear-gradient(135deg, #6E812A, #226B2A, #054A44);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#version-source {
+  font-size: 1rem;
+}

@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find the number</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylev2.css">
 </head>
 
 <body>
     <main class="main">
         <!-- <a href="https://css-tricks.com/auto-growing-inputs-textareas/#aa-non-input-elements-expand-naturally"></a> -->
-        <h1>Guess the number </br> between 
+        <h1>Guess the number </br> between
             <span id="min" class="input" role="textbox" contenteditable>0</span>
-             and 
+            and
             <span id="max" class="input" role="textbox" contenteditable>1000</span>
         </h1>
         <div>Score : <span id="nbVerif"></span></div>
@@ -22,33 +22,37 @@
         <input autofocus="false" class="input" id="input" type="text" inputmode="numeric" pattern="[0-9]*"
             placeholder="enter a number">
         </input>
-        <div class="twoButtons">
-            <button class="button" id="divide" onclick="operation('/',2)">/ 2 </button>
-            <button class="button" id="multiply" onclick="operation('*',1.5)">x 1.5</button>
+        <div id="plateau-boutons">
+            <div class="twoButtons">
+                <button class="button" id="divide" onclick="operation('/',2)">/ 2 </button>
+                <button class="button" id="multiply" onclick="operation('*',1.5)">x 1.5</button>
+            </div>
+            <div class="twoButtons">
+                <button class="button" id="-MAX/200*15" onclick="operation('-',75)">- 75</button>
+                <button class="button" id="+MAX/200*25" onclick="operation('+',125)">+125</button>
+            </div>
+            <div class="twoButtons">
+                <button class="button" id="-MAX/200*5" onclick="operation('-',25)">- 25</button>
+                <button class="button" id="+MAX/200*10" onclick="operation('+',50)">+ 50</button>
+            </div>
+            <div class="twoButtons">
+                <button class="button" id="-MAX/200" onclick="operation('-',5)">- 5</button>
+                <button class="button" id="-MAX/200*2" onclick="operation('+',10)">+ 10</button>
+            </div>
+            <div class="twoButtons">
+                <button class="button" id="-MAX/200/5" onclick="operation('-',1)">- 1</button>
+                <button class="button" id="+MAX/200/5" onclick="operation('+',1)">+ 1</button>
+            </div>
+            <div class="twoButtons">
+                <button class="button" id="reload">New Game</button>
+                <button class="button" onclick="verifNb()">Enter</button>
+            </div>
         </div>
-        <div class="twoButtons">
-            <button class="button" id="-MAX/200*15" onclick="operation('-',75)">- 75</button>
-            <button class="button" id="+MAX/200*25" onclick="operation('+',125)">+125</button>
+        <div>
+            <p id="version-source"> <span id="version">V2_2025-12-09_11:54</span>
+                <a href="https://github.com/thomaslinux/GuessTheRandomNumberJavascript/">View source</a>
+            </p>
         </div>
-        <div class="twoButtons">
-            <button class="button" id="-MAX/200*5" onclick="operation('-',25)">- 25</button>
-            <button class="button" id="+MAX/200*10" onclick="operation('+',50)">+ 50</button>
-        </div>
-        <div class="twoButtons">
-            <button class="button" id="-MAX/200" onclick="operation('-',5)">- 5</button>
-            <button class="button" id="-MAX/200*2" onclick="operation('+',10)">+ 10</button>
-        </div>
-        <div class="twoButtons">
-            <button class="button" id="-MAX/200/5" onclick="operation('-',1)">- 1</button>
-            <button class="button" id="+MAX/200/5" onclick="operation('+',1)">+ 1</button>
-        </div>
-        <div class="twoButtons">
-            <button class="button" id="reload">New Game</button>
-            <button class="button" onclick="verifNb()">Enter</button>
-        </div>
-        <p> <span id="version">V2_2025-12-09_11:54</span>
-            <a href="https://github.com/thomaslinux/GuessTheRandomNumberJavascript/">View source</a>
-        </p>
         <script src="script.js"></script>
     </main>
 </body>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the number</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="main">
+        <h1>Guess the number </br> between <span id="min">0</span> and <span id="max">1000</span></h1>
+        <div id="table-jeu">
+            <div id="indicateurs">
+                <div>Score : <span id="nbVerif"></span></div>
+                <div id="output">Your number :</div>
+            </div>
+            <!-- <a href="https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-worst-input/#:~:text=The%20Gov%2EUK%20article%20mentions%20a%20possible%20solution%3A%20Using%20%3Cinput%20type%3D%22text%22%20inputmode%3D%22numeric%22%20pattern%3D%22%5B0%2D9%5D%2A%22%3E%20is%20a%20nice%20option%20for%20integers%2C%20but%20it%20won%E2%80%99t%20work%20for%20floating%20point%20decimal%20numbers">https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-worst-input/</a> -->
+            <input autofocus="false" id="input" type="text" inputmode="numeric" pattern="[0-9]*"
+                placeholder="your number"></input>
+            <div id="plateau-boutons">
+                <div class="twoButtons">
+                    <button class="button" id="divideByTwo" onclick="operation('/',2)">/2</button>
+                    <button class="button" onclick="operation('*',1.5)">x1.5</button>
+                </div>
+                <div class="twoButtons">
+                    <button class="button" onclick="operation('-',75)">-75</button>
+                    <button class="button" id="multiplyByThree" onclick="operation('+',125)">+125</button>
+                </div>
+                <div class="twoButtons">
+                    <button class="button" onclick="operation('-',25)">-25</button>
+                    <button class="button" onclick="operation('+',50)">+50</button>
+                </div>
+                <div class="twoButtons">
+                    <button class="button" onclick="operation('-',5)">-5</button>
+                    <button class="button" onclick="operation('+',10)">+10</button>
+                </div>
+                <div class="twoButtons">
+                    <button class="button" onclick="operation('-',1)">-1</button>
+                    <button class="button" onclick="operation('+',1)">+1</button>
+                </div>
+                <div class="twoButtons">
+                    <!-- <button class="button" id="reload" onclick="document.location.reload()">New Game</button> -->
+                    <button class="button" id="reload">New Game</button>
+                    <button class="button" onclick="verifNb()">Enter</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p id="version-source"> <span id="version">V2_2025-12-08_09:35</span>
+                <a href="https://github.com/thomaslinux/GuessTheRandomNumberJavascript/">View source</a>
+            </p>
+        </div>
+        <script src="script.js"></script>
+    </main>
+</body>
+
+</html>
