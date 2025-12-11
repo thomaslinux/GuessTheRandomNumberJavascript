@@ -44,7 +44,7 @@ function verifKey(e) {
     if (e.key === 'Enter') {
         verifNb();
     }
-    if (e.key === 'n') {
+    if (e.key === 'n' || e.key === ' ') {
         init();
     }
     if (e.key === 'ArrowUp') { operation('+', MAX / 20); }
