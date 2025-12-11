@@ -70,14 +70,15 @@ br {
 
 body {
   /*https://developer.mozilla.org/fr/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element*/
-  margin: 5% auto;
+  margin: 2rem;
   font-size: 1.6rem;
   max-width: 1280px;
   align-items: center;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 50vh; /*100vh not recommanded*/
   background-color: hsl(108, 29%, 71%);
+  position-anchor: 0;
 }
 
 h1 {
@@ -90,7 +91,7 @@ h1 {
 .main {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 50vh;
   width: fit-content;
 }
 
