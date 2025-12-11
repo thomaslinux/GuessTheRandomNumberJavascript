@@ -18,6 +18,8 @@ https://previewhtml.github.io/?url=https%3A%2F%2Fgithub.com%2Fthomaslinux%2FGues
 - [x] A better way to handle input of a number - ```<input type="text" inputmode="numeric" pattern="[0-9]*">```
 Found here : https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-worst-input/#:~:text=input%20type%3D%22text%22%20inputmode%3D%22numeric%22
 
+- [ ] Number of wins in LocalStorage - **Maximum priority**
+
 - [ ] Lang switch - switch between french and english (/fr/index.html /index.html ?) (javascript language agnostic ?)
 
 - [ ] Light theme switch : https://web.dev/articles/building/a-theme-switch-component OR https://nouvelle-techno.fr/articles/changez-de-theme-en-un-clic-tutoriel-html-css-js
@@ -41,3 +43,5 @@ Found here : https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-w
         - min and max 
 
     - [ ] About section - To advertise my awesome self
+
+- [ ] Timer - For how much time has been spent on the site (world clock ?)
