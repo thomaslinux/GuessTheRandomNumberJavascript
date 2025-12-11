@@ -44,6 +44,9 @@ function verifKey(e) {
     if (e.key === 'Enter') {
         verifNb();
     }
+    if (e.key === 'n') {
+        init();
+    }
     if (e.key === 'ArrowUp') { operation('+', MAX / 20); }
     //if (e.key === 'ArrowRight') {operation('+', MAX / 20);}
     if (e.key === 'ArrowDown') { operation('-', MAX / 20); }
@@ -100,7 +103,6 @@ function verifNb() {
         htmlMAX.innerText = input.value;
         wins++;
         localStorage.setItem("wins",wins);
-        console.log(localStorage.getItem("wins"));
         document.querySelector("#wins span").innerText = wins;
     }
     nbVerif++;
