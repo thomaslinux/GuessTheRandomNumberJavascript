@@ -32,6 +32,12 @@ Found here : https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-w
     
     - [ ] How to play  - To explain how to play from text instead of explaining manually
 
-    - [ ] Settings section - To change language, color theme, min and max values
+    - [ ] Settings section - To change
+        
+        - language
+
+        - color theme
+
+        - min and max 
 
     - [ ] About section - To advertise my awesome self
