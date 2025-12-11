@@ -2,6 +2,7 @@ let MIN = 0;
 let MAX = 1000;
 let nbToFind = 0;
 let nbVerif = 0;
+let wins = 0;
 const output = document.getElementById("output");
 const input = document.getElementById("input");
 const infoNbVerif = document.getElementById("nbVerif");
@@ -13,6 +14,7 @@ reload.addEventListener('click', (e) => { init(); });
 init();
 
 function init() {
+    wins = parseInt(localStorage.getItem("wins")) || 0;
     htmlMIN.innerText = MIN;
     htmlMAX.innerText = MAX;
     nbToFind = alea(MIN, MAX);
@@ -21,6 +23,7 @@ function init() {
     input.value = MAX;
     verifNb();
     infoNbVerif.innerText = "0";
+    document.querySelector("#wins span").innerText = wins;
 }
 
 input.addEventListener("input", verif)
@@ -28,9 +31,9 @@ input.addEventListener("wheel", onWheel)
 function onWheel(e) {
     e.preventDefault();
     if (e.deltaY > 0) { // on scroll down
-        operation('-',MAX/20);
+        operation('-', MAX / 20);
     } else if (e.deltaY < 0) { // on scroll up
-        operation('+',MAX/20);
+        operation('+', MAX / 20);
     }
 }
 
@@ -41,9 +44,9 @@ function verifKey(e) {
     if (e.key === 'Enter') {
         verifNb();
     }
-    if (e.key === 'ArrowUp') {operation('+', MAX / 20);}
+    if (e.key === 'ArrowUp') { operation('+', MAX / 20); }
     //if (e.key === 'ArrowRight') {operation('+', MAX / 20);}
-    if (e.key === 'ArrowDown') {operation('-', MAX / 20);}
+    if (e.key === 'ArrowDown') { operation('-', MAX / 20); }
     //if (e.key === 'ArrowLeft') {operation('-', MAX / 20);}
 
 }
@@ -95,6 +98,9 @@ function verifNb() {
         document.querySelector("#indicator_win").style.display = "block";
         htmlMIN.innerText = input.value;
         htmlMAX.innerText = input.value;
+        wins++;
+        localStorage.setItem("wins",wins);
+        console.log(localStorage.getItem("wins"));
     }
     nbVerif++;
     infoNbVerif.innerText = nbVerif;
