@@ -20,7 +20,7 @@ Found here : https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-w
 
 - [x] Number of wins in LocalStorage - up version to V3
 
-- [ ] Lang switch - switch between french and english (/fr/index.html /index.html ?) (javascript language agnostic ?)
+- [x] Lang switch - switch between french and english (index.fr.html index.html ) **works !**
 
 - [ ] Light theme switch : https://web.dev/articles/building/a-theme-switch-component OR https://nouvelle-techno.fr/articles/changez-de-theme-en-un-clic-tutoriel-html-css-js
 
