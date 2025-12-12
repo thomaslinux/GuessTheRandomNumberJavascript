@@ -3,6 +3,7 @@ let MAX = 1000;
 let nbToFind = 0;
 let nbVerif = 0;
 let wins = 0;
+let boolWin = false;
 const output = document.getElementById("output");
 const input = document.getElementById("input");
 const infoNbVerif = document.getElementById("nbVerif");
@@ -16,6 +17,7 @@ init();
 
 function init() {
     wins = parseInt(localStorage.getItem("wins")) || 0;
+    boolWin = false;
     htmlMIN.innerText = MIN;
     htmlMAX.innerText = MAX;
     nbToFind = alea(MIN, MAX);
@@ -103,7 +105,10 @@ function verifNb() {
         htmlMIN.innerText = input.value;
         htmlMAX.innerText = input.value;
         wins = document.querySelector("#wins span").innerText;
+        if (boolWin === false) {
         wins++;
+        boolWin = true;
+        }
         localStorage.setItem("wins",wins);
         document.querySelector("#wins span").innerText = wins;
     }
