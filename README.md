@@ -24,11 +24,21 @@ Found here : https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-w
 
 - [ ] Light theme switch : https://web.dev/articles/building/a-theme-switch-component OR https://nouvelle-techno.fr/articles/changez-de-theme-en-un-clic-tutoriel-html-css-js
 
-- [ ] Scoreboard - LocalStorage or cookie ?
+- [ ] Cookie popup - To ask the user if he accepts to appear on the leaderboard and to have localdata saved (cookie preference check in script.js)
 
-- [ ] Leaderboard - So a database ?
+- [ ] Scoreboard - LocalStorage (3 column per game : int game_id, int time_on_game, int nb_plays)
 
-- [ ] Wins per day count - So we know how popular is the site
+    - [ ] Timer - For how much time has been spent on the site (world clock ?) and a timer per play
+     
+    - [ ] Play counter - Save the number of play
+    
+    - [ ] add Chart.js to have a performance Graph
+
+- [ ] Global database :
+    
+    - [ ] Leaderboard - To know who plays the most
+
+    - [ ] Wins per day count - So we know how popular is the site
 
 - [ ] Additionnal Sections 
     
@@ -44,4 +54,3 @@ Found here : https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-w
 
     - [ ] About section - To advertise my awesome self
 
-- [ ] Timer - For how much time has been spent on the site (world clock ?)
