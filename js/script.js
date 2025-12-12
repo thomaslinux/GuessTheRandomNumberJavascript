@@ -101,6 +101,7 @@ function verifNb() {
         document.querySelector("#indicator_win").style.display = "block";
         htmlMIN.innerText = input.value;
         htmlMAX.innerText = input.value;
+        wins = document.querySelector("#wins span").innerText;
         wins++;
         localStorage.setItem("wins",wins);
         document.querySelector("#wins span").innerText = wins;
