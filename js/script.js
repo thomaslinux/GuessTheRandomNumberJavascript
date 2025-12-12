@@ -9,6 +9,7 @@ const infoNbVerif = document.getElementById("nbVerif");
 const htmlMIN = document.getElementById("min");
 const htmlMAX = document.getElementById("max");
 const reload = document.getElementById("reload");
+document.querySelector("#version").innerText += "\nJS12-12-25-12:52"
 reload.addEventListener('click', (e) => { init(); });
 // window.onload = init;
 init();
