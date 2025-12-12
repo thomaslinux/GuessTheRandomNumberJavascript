@@ -90,12 +90,12 @@ function verifNb() {
         output.innerText = "Number > " + input.value;
         document.querySelector("#indicator_more").style.display = "block";
         document.querySelector("#indicator_more span").innerText = input.value;
-        htmlMIN.innerText = input.value;
+        htmlMIN.innerText = input.value > MIN ? input.value : MIN;
     } else if (nbToFind < input.value) {
         output.innerText = "Number < " + input.value;
         document.querySelector("#indicator_less").style.display = "block";
         document.querySelector("#indicator_less span").innerText = input.value;
-        htmlMAX.innerText = input.value;
+        htmlMAX.innerText = input.value < MAX ? input.value : MAX;
     } else {
         output.innerText = "You win !"
         document.querySelector("#indicator_win").style.display = "block";
