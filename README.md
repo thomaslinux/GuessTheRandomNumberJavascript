@@ -35,6 +35,8 @@ Found here : https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-w
     - [ ] Timer - For how much time has been spent on the site (world clock ?) and a timer per play
      
     - [ ] Play counter - Save the number of play
+          
+    - [ ] Adverage number of plays per wins (total plays / wins)
     
     - [ ] add Chart.js to have a performance Graph
 
