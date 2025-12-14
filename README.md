@@ -23,8 +23,12 @@ Found here : https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-w
 - [x] Lang switch - switch between french and english (index.fr.html index.html ) **works !**
 
 - [x] Move min and max indicators aside from the input
+
+- [ ] Modify css to accommodate the change
       
 - [ ] Add a loadbar visual indicator
+
+- [ ] Buttons should appear progressively as part of an initial tutorial on how to play the game. (remake the game ?)
 
 - [ ] Light theme switch : https://web.dev/articles/building/a-theme-switch-component OR https://nouvelle-techno.fr/articles/changez-de-theme-en-un-clic-tutoriel-html-css-js
 
