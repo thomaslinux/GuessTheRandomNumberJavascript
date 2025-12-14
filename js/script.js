@@ -3,18 +3,21 @@ let MAX = 1000;
 let nbToFind = 0;
 let nbVerif = 0;
 let wins = 0;
+let boolWin = false;
 const output = document.getElementById("output");
 const input = document.getElementById("input");
 const infoNbVerif = document.getElementById("nbVerif");
 const htmlMIN = document.getElementById("min");
 const htmlMAX = document.getElementById("max");
 const reload = document.getElementById("reload");
+document.querySelector("#version").innerText += "\nJS_2025-12-12_17:28"
 reload.addEventListener('click', (e) => { init(); });
 // window.onload = init;
 init();
 
 function init() {
     wins = parseInt(localStorage.getItem("wins")) || 0;
+    boolWin = false;
     htmlMIN.innerText = MIN;
     htmlMAX.innerText = MAX;
     nbToFind = alea(MIN, MAX);
@@ -90,19 +93,22 @@ function verifNb() {
         output.innerText = "Number > " + input.value;
         document.querySelector("#indicator_more").style.display = "block";
         document.querySelector("#indicator_more span").innerText = input.value;
-        htmlMIN.innerText = input.value;
+        htmlMIN.innerText = input.value > MIN ? input.value : MIN;
     } else if (nbToFind < input.value) {
         output.innerText = "Number < " + input.value;
         document.querySelector("#indicator_less").style.display = "block";
         document.querySelector("#indicator_less span").innerText = input.value;
-        htmlMAX.innerText = input.value;
+        htmlMAX.innerText = input.value < MAX ? input.value : MAX;
     } else {
         output.innerText = "You win !"
         document.querySelector("#indicator_win").style.display = "block";
         htmlMIN.innerText = input.value;
         htmlMAX.innerText = input.value;
         wins = document.querySelector("#wins span").innerText;
+        if (boolWin === false) {
         wins++;
+        boolWin = true;
+        }
         localStorage.setItem("wins",wins);
         document.querySelector("#wins span").innerText = wins;
     }

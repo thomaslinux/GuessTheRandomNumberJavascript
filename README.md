@@ -22,6 +22,10 @@ Found here : https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-w
 
 - [x] Lang switch - switch between french and english (index.fr.html index.html ) **works !**
 
+- [ ] Move min and max indicators aside from the input
+      
+- [ ] Add a loadbar visual indicator
+
 - [ ] Light theme switch : https://web.dev/articles/building/a-theme-switch-component OR https://nouvelle-techno.fr/articles/changez-de-theme-en-un-clic-tutoriel-html-css-js
 
 - [ ] Cookie popup - To ask the user if he accepts to appear on the leaderboard and to have localdata saved (cookie preference check in script.js)
@@ -31,6 +35,8 @@ Found here : https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-w
     - [ ] Timer - For how much time has been spent on the site (world clock ?) and a timer per play
      
     - [ ] Play counter - Save the number of play
+          
+    - [ ] Adverage number of plays per wins (total plays / wins)
     
     - [ ] add Chart.js to have a performance Graph
 
