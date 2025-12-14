@@ -22,7 +22,7 @@ Found here : https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-w
 
 - [x] Lang switch - switch between french and english (index.fr.html index.html ) **works !**
 
-- [ ] Move min and max indicators aside from the input
+- [x] Move min and max indicators aside from the input
       
 - [ ] Add a loadbar visual indicator
 
