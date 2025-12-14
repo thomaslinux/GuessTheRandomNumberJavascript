@@ -14,9 +14,11 @@
     <main class="main">
         <!-- <a href="https://css-tricks.com/auto-growing-inputs-textareas/#aa-non-input-elements-expand-naturally"></a> -->
         <h1 title="Devine le nombre entre MIN et MAX">Devine le nombre </br> entre
-            <span title="MIN / Nombre minimum possible" id="min" role="textbox" contenteditable inputmode="numeric" pattern="[0-9]*">0</span>
+            <span title="MIN / Nombre minimum possible" id="min" role="textbox" contenteditable inputmode="numeric"
+                pattern="[0-9]*">0</span>
             et
-            <span title="MAX / Nombre maximum possible" id="max" role="textbox" contenteditable inputmode="numeric" pattern="[0-9]*">1000</span>
+            <span title="MAX / Nombre maximum possible" id="max" role="textbox" contenteditable inputmode="numeric"
+                pattern="[0-9]*">1000</span>
         </h1>
         <div class="table-jeu">
             <div title="Information sur votre supposition" class="indicateurs">
@@ -27,39 +29,56 @@
                 <div id="indicator_less" style="display:none;">Nombre < <span>value</span></div>
                 <div id="indicator_empty" style="display:block;">Devine le nombre</div>
             </div>
-            <!-- <a href="https://stackoverflow.blog/2022/12/26/why-the-Number - input-is-the-worst-input/#:~:text=The%20Gov%2EUK%20article%20mentions%20a%20possible%20solution%3A%20Using%20%3Cinput%20type%3D%22text%22%20inputmode%3D%22numeric%22%20pattern%3D%22%5B0%2D9%5D%2A%22%3E%20is%20a%20nice%20option%20for%20integers%2C%20but%20it%20won%E2%80%99t%20work%20for%20floating%20point%20decimal%20numbers">https://stackoverflow.blog/2022/12/26/why-the-Number - input-is-the-worst-input/</a> -->
-            <input autofocus="false" class="input" id="input" type="text" inputmode="numeric" pattern="[0-9]*"
-                placeholder="Entre un nombre" title="Entre un nombre ou utilise les boutons">
-            </input>
+            <div class="indicateurs">
+                <!-- <a href="https://stackoverflow.blog/2022/12/26/why-the-Number - input-is-the-worst-input/#:~:text=The%20Gov%2EUK%20article%20mentions%20a%20possible%20solution%3A%20Using%20%3Cinput%20type%3D%22text%22%20inputmode%3D%22numeric%22%20pattern%3D%22%5B0%2D9%5D%2A%22%3E%20is%20a%20nice%20option%20for%20integers%2C%20but%20it%20won%E2%80%99t%20work%20for%20floating%20point%20decimal%20numbers">https://stackoverflow.blog/2022/12/26/why-the-Number - input-is-the-worst-input/</a> -->
+                <span title="MIN / minimal possible Number" id="min" role="textbox" contenteditable inputmode="numeric"
+                    pattern="[0-9]*">0</span>
+                <pre>   <   </pre>
+                <input autofocus="false" class="input" id="input" type="text" inputmode="numeric" pattern="[0-9]*"
+                    placeholder="Entre un nombre" title="Entre un nombre ou utilise les boutons">
+                </input>
+                <pre>   <   </pre>
+                <span title="MAX / maximal possible Number" id="max" role="textbox" contenteditable inputmode="numeric"
+                    pattern="[0-9]*">1000</span>
+            </div>
             <div class="plateau-boutons">
                 <div class="twoButtons">
                     <button class="button" title="Nombre / 2" id="divide" onclick="operation('/',2)">/ 2 </button>
-                    <button class="button" title="Nombre x 1.5" id="multiply" onclick="operation('*',1.5)">x 1.5</button>
+                    <button class="button" title="Nombre x 1.5" id="multiply" onclick="operation('*',1.5)">x
+                        1.5</button>
                 </div>
                 <div class="twoButtons">
-                    <button class="button" title="Nombre - MAX/200*15" id="button1" onclick="operation('-',75)">- 75</button>
-                    <button class="button" title="Nombre + MAX/200*25" id="button2"  onclick="operation('+',125)">+125</button>
+                    <button class="button" title="Nombre - MAX/200*15" id="button1" onclick="operation('-',75)">-
+                        75</button>
+                    <button class="button" title="Nombre + MAX/200*25" id="button2"
+                        onclick="operation('+',125)">+125</button>
                 </div>
                 <div class="twoButtons">
-                    <button class="button" title="Nombre - MAX/200*5" id="button3" onclick="operation('-',25)">- 25</button>
-                    <button class="button" title="Nombre + MAX/200*10" id="button4" onclick="operation('+',50)">+ 50</button>
+                    <button class="button" title="Nombre - MAX/200*5" id="button3" onclick="operation('-',25)">-
+                        25</button>
+                    <button class="button" title="Nombre + MAX/200*10" id="button4" onclick="operation('+',50)">+
+                        50</button>
                 </div>
                 <div class="twoButtons">
                     <button class="button" title="Nombre - MAX/200" id="button5" onclick="operation('-',5)">- 5</button>
-                    <button class="button" title="Nombre + MAX/200*2" id="button6" onclick="operation('+',10)">+ 10</button>
+                    <button class="button" title="Nombre + MAX/200*2" id="button6" onclick="operation('+',10)">+
+                        10</button>
                 </div>
                 <div class="twoButtons">
                     <button class="button" title="Nombre - 1" id="button7" onclick="operation('-',1)">- 1</button>
                     <button class="button" title="Nombre + 1" id="button8" onclick="operation('+',1)">+ 1</button>
                 </div>
                 <div class="twoButtons">
-                    <button class="button" title="Appuie sur [n] pour générer un nouveau nombre à trouver" id="reload">Nouvelle partie</button>
-                    <button class="button" title="Appuie sur [Enter] pour vérifier ta supposition actuelle" onclick="verifNb()">Entrer</button>
+                    <button class="button" title="Appuie sur [n] pour générer un nouveau nombre à trouver"
+                        id="reload">Nouvelle partie</button>
+                    <button class="button" title="Appuie sur [Enter] pour vérifier ta supposition actuelle"
+                        onclick="verifNb()">Entrer</button>
                 </div>
             </div>
         </div>
         <div class="version-source">
-            <p id="wins">Victoires : <span role="textbox" contenteditable inputmode="numeric" pattern="[0-9]*">0</span></p>
+            <p id="wins">Victoires : <span role="textbox" contenteditable inputmode="numeric" pattern="[0-9]*">0</span>
+            </p>
             <p>fr | <a href="index.html">en</a></p>
             <p> <span title="Version actuelle de la page" id="version">V3fr_2025-12-12_12:40</span>
                 <a href="https://github.com/thomaslinux/GuessTheRandomNumberJavascript/"> source</a>
