@@ -29,6 +29,7 @@
 .indicateurs {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 15px 0 0 0;
 }
 
@@ -46,13 +47,13 @@
   font-size: 2rem;
   border: none;
   outline: none;
-  border-radius: 10px;
+  border-radius: 1rem;
   background-color: #054A44;
   font-weight: bold;
   color: white;
   /* width: fit-content; */
-  width: 200px;
-  margin: 15px auto;
+  width: 6rem;
+  margin: 1rem auto;
   box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.5);
 }
 
