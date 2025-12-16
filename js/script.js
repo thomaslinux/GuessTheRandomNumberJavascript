@@ -10,7 +10,7 @@ const infoNbVerif = document.getElementById("nbVerif");
 const htmlMIN = document.getElementById("min");
 const htmlMAX = document.getElementById("max");
 const reload = document.getElementById("reload");
-document.querySelector("#version").innerText += "\nJS_2025-12-12_17:28"
+document.querySelector("#version").innerText += "\nJS_2025-12-16_16:50"
 reload.addEventListener('click', (e) => { init(); });
 // window.onload = init;
 init();
