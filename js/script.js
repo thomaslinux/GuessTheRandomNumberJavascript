@@ -44,17 +44,16 @@ document.addEventListener('keydown', function (e) {
     verifKey(e);
 });
 function verifKey(e) {
-    if (e.key === 'Enter') {
-        verifNb();
-    }
-    if (e.key === 'n' || e.key === ' ') {
-        init();
-    }
+    if (e.key === 'Enter') {verifNb(); }
+    if (e.key === 'n' || e.key === ' ') {init();}
     if (e.key === 'ArrowUp') { operation('+', MAX / 20); }
     //if (e.key === 'ArrowRight') {operation('+', MAX / 20);}
     if (e.key === 'ArrowDown') { operation('-', MAX / 20); }
     //if (e.key === 'ArrowLeft') {operation('-', MAX / 20);}
-
+    if (e.key === 'a') { operation('/', 2); }
+    if (e.key === 'z') { operation('*', 1.5); }
+    if (e.key === 'e') { operation('-', MAX/200*15)); }
+    if (e.key === 'r') { operation('+', MAX/200*2); }
 }
 
 
