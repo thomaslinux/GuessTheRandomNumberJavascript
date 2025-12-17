@@ -44,13 +44,8 @@ document.addEventListener('keydown', function (e) {
     verifKey(e);
 });
 function verifKey(e) {
-    if (e.key === 'Enter') {
-        verifNb(); 
-    }
-    if (e.key === 'n' || e.key === 'c' || e.key === '.') {
-        e.preventDefault();
-        init();
-    }
+    if (e.key === 'Enter' || e.key === 'Tab') { e.preventDefault(); verifNb(); }
+    if (e.key === 'n' || e.key === 'c' || e.key === '.') { e.preventDefault(); init(); }
     if (e.key === 'ArrowUp') { e.preventDefault(); operation('+', MAX / 20); }
     //if (e.key === 'ArrowRight') {e.preventDefault(); operation('+', MAX / 20);}
     if (e.key === 'ArrowDown') { e.preventDefault(); operation('-', MAX / 20); }
