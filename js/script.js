@@ -1,4 +1,4 @@
-document.querySelector("#version").innerText += "\nJS_2025-12-17_12:03_debug"
+document.querySelector("#version").innerText += "\nJS_2025-12-17_12:06_debug"
 const HTML_OUTPUT = document.getElementById("output");
 const HTML_INPUT = document.getElementById("input");
 const HTML_INFO_NB_VERIF = document.getElementById("nbVerif");
@@ -105,20 +105,20 @@ function verifNb() {
     // display the element to display
     if (HTML_INPUT.value === '') {
         // input.value = '0'
-        HTML_OUTPUT.innerText = "Guess the number !"
+        // HTML_OUTPUT.innerText = "Guess the number !"
         document.querySelector("#indicator_empty").style.display = "block";
     } else if (nbToFind > HTML_INPUT.value) {
-        HTML_OUTPUT.innerText = "Number > " + HTML_INPUT.value;
+        // HTML_OUTPUT.innerText = "Number > " + HTML_INPUT.value;
         document.querySelector("#indicator_more").style.display = "block";
         document.querySelector("#indicator_more span").innerText = HTML_INPUT.value;
         HTML_MIN.innerText = HTML_INPUT.value > MIN ? HTML_INPUT.value : MIN;
     } else if (nbToFind < HTML_INPUT.value) {
-        HTML_OUTPUT.innerText = "Number < " + HTML_INPUT.value;
+        // HTML_OUTPUT.innerText = "Number < " + HTML_INPUT.value;
         document.querySelector("#indicator_less").style.display = "block";
         document.querySelector("#indicator_less span").innerText = HTML_INPUT.value;
         HTML_MAX.innerText = HTML_INPUT.value < MAX ? HTML_INPUT.value : MAX;
     } else {
-        HTML_OUTPUT.innerText = "You win !"
+        // HTML_OUTPUT.innerText = "You win !"
         document.querySelector("#indicator_win").style.display = "block";
         HTML_MIN.innerText = HTML_INPUT.value;
         HTML_MAX.innerText = HTML_INPUT.value;
