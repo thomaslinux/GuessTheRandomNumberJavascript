@@ -39,6 +39,12 @@
             </div>
             <div class="plateau-boutons">
                 <div class="twoButtons">
+                    <button class="button" title="Appuie sur [n] pour générer un nouveau nombre à trouver"
+                        id="reload">Nouvelle partie</button>
+                    <button class="button" title="Appuie sur [Enter] pour vérifier ta supposition actuelle"
+                        onclick="verifNb()">Entrer</button>
+                </div>
+                <div class="twoButtons">
                     <button class="button" title="Nombre / 2" id="divide" onclick="operation('/',2)">/ 2 </button>
                     <button class="button" title="Nombre x 1.5" id="multiply" onclick="operation('*',1.5)">x
                         1.5</button>
@@ -64,19 +70,13 @@
                     <button class="button" title="Nombre - 1" id="button7" onclick="operation('-',1)">- 1</button>
                     <button class="button" title="Nombre + 1" id="button8" onclick="operation('+',1)">+ 1</button>
                 </div>
-                <div class="twoButtons">
-                    <button class="button" title="Appuie sur [n] pour générer un nouveau nombre à trouver"
-                        id="reload">Nouvelle partie</button>
-                    <button class="button" title="Appuie sur [Enter] pour vérifier ta supposition actuelle"
-                        onclick="verifNb()">Entrer</button>
-                </div>
             </div>
         </div>
         <div class="version-source">
             <p id="wins">Victoires : <span role="textbox" contenteditable inputmode="numeric" pattern="[0-9]*">0</span>
             </p>
             <p>FR | <a href="index.html">EN</a></p>
-            <p> <span title="Version actuelle de la page" id="version">V3fr_2025-12-16_16:23</span>
+            <p> <span title="Version actuelle de la page" id="version">V3fr_2025-12-16_11:14</span>
                 <a href="https://github.com/thomaslinux/GuessTheRandomNumberJavascript/"> source</a>
             </p>
         </div>

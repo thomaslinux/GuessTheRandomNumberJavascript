@@ -39,6 +39,12 @@
             </div>
             <div class="plateau-boutons">
                 <div class="twoButtons">
+                    <button class="button" title="Press [n] to generate New random number to find" id="reload">New
+                        Game</button>
+                    <button class="button" title="Press [Enter] to verify the current input"
+                        onclick="verifNb()">Enter</button>
+                </div>
+                <div class="twoButtons">
                     <button class="button" title="Number / 2" id="divide" onclick="operation('/',2)">/ 2
                     </button>
                     <button class="button" title="Number x 1.5" id="multiply" onclick="operation('*',1.5)">x
@@ -67,18 +73,12 @@
                     <button class="button" title="Number + 1" id="button8" onclick="operation('+',1)">+
                         1</button>
                 </div>
-                <div class="twoButtons">
-                    <button class="button" title="Press [n] to generate New random number to find" id="reload">New
-                        Game</button>
-                    <button class="button" title="Press [Enter] to verify the current input"
-                        onclick="verifNb()">Enter</button>
-                </div>
             </div>
         </div>
         <div class="version-source">
             <p id="wins">Wins : <span role="textbox" contenteditable inputmode="numeric" pattern="[0-9]*">0</span></p>
             <p><a href="index.fr.html">FR</a> | EN</p>
-            <p> <span title="Current version of the page" id="version">V3_2025-12-16_16:23</span>
+            <p> <span title="Current version of the page" id="version">V3_2025-12-16_11:14</span>
                 <a href="https://github.com/thomaslinux/GuessTheRandomNumberJavascript/"> source</a>
             </p>
         </div>
