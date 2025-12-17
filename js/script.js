@@ -1,9 +1,4 @@
-let MIN = 0;
-let MAX = 1000;
-let nbToFind = 0;
-let nbVerif = 0;
-let wins = 0;
-let boolWin = false;
+document.querySelector("#version").innerText += "\nJS_2025-12-17_11:45"
 const HTML_OUTPUT = document.getElementById("output");
 const HTML_INPUT = document.getElementById("input");
 const HTML_INFO_NB_VERIF = document.getElementById("nbVerif");
@@ -11,9 +6,13 @@ const HTML_MIN = document.getElementById("min");
 const HTML_MAX = document.getElementById("max");
 const HTML_RELOAD_BUTTON = document.getElementById("reload");
 const HTML_WINS = document.querySelector("#wins span");
-document.querySelector("#version").innerText += "\nJS_2025-12-17_11:35"
+let MIN = 0;
+let MAX = 1000;
+let nbToFind = 0;
+let nbVerif = 0;
+let wins = 0;
+let boolWin = false;
 HTML_RELOAD_BUTTON.addEventListener('click', (e) => { init(); });
-// window.onload = init;
 init();
 
 function init() {
@@ -32,9 +31,11 @@ function init() {
 
 // https://stackoverflow.com/questions/5961333/prevent-default-action-for-tab-key-in-chrome#:~:text=need%20to%20call%20the%20event%20on%20keydown
 // Already on keydown so why ??
-document.addEventListener('keydown', function (e) {  verifKey(e); }); // doesn't work on chrome mobile ?
+// document.addEventListener('keydown', function (e) {  verifKey(e); }); // doesn't work on chrome mobile ?
 // document.addEventListener('keydown', function (e) {  HTML_INPUT.focus(); });
 // input.keydown(function (e) {  verifKey(e); }) // jQuery only also input already exists ??
+// https://developer.mozilla.org/en-US/docs/Web/API/Element/keydown_event#browser_compatibility:~:text=onkeydown
+onkeydown =  (e) => {  verifKey(e); };
 // HTML_INPUT.addEventListener('keydown', function (e) {  verifKey(e); });
 function verifKey(e) {
     if (e.key === 'Enter' || e.key === 'Tab' || event.keyCode === 9) { e.preventDefault(); verifNb(); }
@@ -55,7 +56,7 @@ function verifKey(e) {
     if (e.key === 'r') { e.preventDefault(); operation('+', MAX/200*2); }
 }
 
-HTML_INPUT.addEventListener("input", verif)
+// HTML_INPUT.addEventListener("input", verif)
 HTML_INPUT.addEventListener("wheel", onWheel)
 function onWheel(e) {
     e.preventDefault();
