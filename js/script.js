@@ -67,8 +67,11 @@ function verifKey(e) {
     if (e.key === 'r') { e.preventDefault(); operation('+', MAX/200*2); }
 }
 
-
-// HTML_INPUT.addEventListener("input", verif)
+// https://stackoverflow.com/questions/5873810/how-can-i-get-last-characters-of-a-string#:~:text=substring
+// HTML_INPUT.addEventListener("input", (e) => {
+//     lastChar = HTML_INPUT.value
+//     if ()
+// });
 HTML_INPUT.addEventListener("wheel", onWheel)
 function onWheel(e) {
     e.preventDefault();
