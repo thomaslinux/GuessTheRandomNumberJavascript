@@ -1,4 +1,4 @@
-document.querySelector("#version").innerText += "\nJS_2025-12-17_14:00"
+document.querySelector("#version").innerText += "\nJS_2025-12-17_14:02"
 const HTML_OUTPUT = document.getElementById("output");
 const HTML_INPUT = document.getElementById("input");
 const HTML_INFO_NB_VERIF = document.getElementById("nbVerif");
@@ -96,7 +96,7 @@ function operation(operator, number) {
 
 function removeLetters() {
     // HTML_INPUT.value = HTML_INPUT.value.replace(/\D+/g, ''); // force numbers
-    HTML_INPUT.value = HTML_INPUT.match(/[0-9]+/); // force numbers
+    HTML_INPUT.value = HTML_INPUT.value.match(/[0-9]+/); // force numbers
 }
 function verifNb() {
 
@@ -143,9 +143,9 @@ function verifNb() {
 }
 
 /**
- * @param {Number} MIN valeur minimum du nombre aléatoire (inclue)
- * @param {Number} MAX valeur maximum du nombre aléatoire (excluse)
- * @returns {Number} un entier aléatoire entre une valeur MIN (inclue) et une valeur MAX (exclue)
+ * @param {Number} MIN valeur minimum du nombre aleatoire (inclue)
+ * @param {Number} MAX valeur maximum du nombre aleatoire (excluse)
+ * @returns {Number} un entier aleatoire entre une valeur MIN (inclue) et une valeur MAX (exclue)
  */
 function alea(MIN, MAX) {
     return Math.floor(Math.random() * (MAX - MIN) + MIN);
