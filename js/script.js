@@ -1,4 +1,4 @@
-document.querySelector("#version").innerText += "\nJS_2025-12-17_11:51"
+document.querySelector("#version").innerText += "\nJS_2025-12-17_12:03_debug"
 const HTML_OUTPUT = document.getElementById("output");
 const HTML_INPUT = document.getElementById("input");
 const HTML_INFO_NB_VERIF = document.getElementById("nbVerif");
@@ -44,9 +44,15 @@ function verifKey(e) {
     //if (e.key === 'ArrowRight') {e.preventDefault(); operation('+', MAX / 20);}
     if (e.key === 'ArrowDown') { e.preventDefault(); operation('-', MAX / 20); }
     //if (e.key === 'ArrowLeft') {e.preventDefault(); operation('-', MAX / 20);}
-    if (e.key === '-' || e.key === 'q') {
-        e.preventDefault(); operation('-', (HTML_MAX.innerText-HTML_MIN.innerText)/2);
-    } // dichotomic substraction
+    if (e.key === '-' || e.key === 'q') { // dichotomic substraction
+        HTML_OUTPUT.style.display = "block";
+        HTML_OUTPUT.innerText = "You pressed - "
+        e.preventDefault();
+        operation('-', (HTML_MAX.innerText-HTML_MIN.innerText)/2);
+    } else {
+        HTML_OUTPUT.style.display = "block";
+        HTML_OUTPUT.innerText = "You pressed " + e.key;
+    }
     if (e.key === '+' || e.key === 's' || e.key === ' ') {
         e.preventDefault(); operation('+', (HTML_MAX.innerText-HTML_MIN.innerText)/2);
     } // dichotomic addition
