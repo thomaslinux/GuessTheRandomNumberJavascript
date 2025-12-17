@@ -1,4 +1,4 @@
-document.querySelector("#version").innerText += "\nJS_2025-12-17_12:12_debug"
+document.querySelector("#version").innerText += "\nJS_2025-12-17_12:16_debug"
 const HTML_OUTPUT = document.getElementById("output");
 const HTML_INPUT = document.getElementById("input");
 const HTML_INFO_NB_VERIF = document.getElementById("nbVerif");
@@ -34,7 +34,7 @@ function init() {
 // document.addEventListener('keydown', function (e) {  verifKey(e); }); // doesn't work on chrome mobile ?
 
 // https://stackoverflow.com/questions/36753548/keycode-on-android-is-always-229#:~:text=keypress,-%2E
-document.addEventListener('keypress', function (e) {  verifKey(e); });
+document.addEventListener('keyup', function (e) {  verifKey(e); });
 
 // focus INPUT
 // document.addEventListener('keydown', function (e) {  HTML_INPUT.focus(); });
