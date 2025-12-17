@@ -11,7 +11,7 @@ const HTML_MIN = document.getElementById("min");
 const HTML_MAX = document.getElementById("max");
 const HTML_RELOAD_BUTTON = document.getElementById("reload");
 const HTML_WINS = document.querySelector("#wins span");
-document.querySelector("#version").innerText += "\nJS_2025-12-17_11:25"
+document.querySelector("#version").innerText += "\nJS_2025-12-17_11:35"
 HTML_RELOAD_BUTTON.addEventListener('click', (e) => { init(); });
 // window.onload = init;
 init();
@@ -30,22 +30,12 @@ function init() {
     HTML_WINS.innerText = wins;
 }
 
-HTML_INPUT.addEventListener("input", verif)
-HTML_INPUT.addEventListener("wheel", onWheel)
-function onWheel(e) {
-    e.preventDefault();
-    if (e.deltaY > 0) { // on scroll down
-        operation('-', MAX / 20);
-    } else if (e.deltaY < 0) { // on scroll up
-        operation('+', MAX / 20);
-    }
-}
-
 // https://stackoverflow.com/questions/5961333/prevent-default-action-for-tab-key-in-chrome#:~:text=need%20to%20call%20the%20event%20on%20keydown
 // Already on keydown so why ??
-document.addEventListener('keydown', function (e) {  HTML_INPUT.focus(); }); // doesn't work on chrome ?
+document.addEventListener('keydown', function (e) {  verifKey(e); }); // doesn't work on chrome mobile ?
+// document.addEventListener('keydown', function (e) {  HTML_INPUT.focus(); });
 // input.keydown(function (e) {  verifKey(e); }) // jQuery only also input already exists ??
-HTML_INPUT.addEventListener('keydown', function (e) {  verifKey(e); });
+// HTML_INPUT.addEventListener('keydown', function (e) {  verifKey(e); });
 function verifKey(e) {
     if (e.key === 'Enter' || e.key === 'Tab' || event.keyCode === 9) { e.preventDefault(); verifNb(); }
     if (e.key === 'n' || e.key === 'c' || e.key === '.') { e.preventDefault(); init(); }
@@ -65,7 +55,16 @@ function verifKey(e) {
     if (e.key === 'r') { e.preventDefault(); operation('+', MAX/200*2); }
 }
 
-
+HTML_INPUT.addEventListener("input", verif)
+HTML_INPUT.addEventListener("wheel", onWheel)
+function onWheel(e) {
+    e.preventDefault();
+    if (e.deltaY > 0) { // on scroll down
+        operation('-', MAX / 20);
+    } else if (e.deltaY < 0) { // on scroll up
+        operation('+', MAX / 20);
+    }
+}
 
 function operation(operator, number) {
     if (boolWin === false) {
