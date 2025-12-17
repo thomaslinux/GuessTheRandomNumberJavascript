@@ -1,4 +1,4 @@
-document.querySelector("#version").innerText += "\nJS_2025-12-17_12:19"
+document.querySelector("#version").innerText += "\nJS_2025-12-17_13:59"
 const HTML_OUTPUT = document.getElementById("output");
 const HTML_INPUT = document.getElementById("input");
 const HTML_INFO_NB_VERIF = document.getElementById("nbVerif");
@@ -95,7 +95,8 @@ function operation(operator, number) {
 }
 
 function removeLetters() {
-    HTML_INPUT.value = HTML_INPUT.value.replace(/\D+/g, ''); // force numbers
+    // HTML_INPUT.value = HTML_INPUT.value.replace(/\D+/g, ''); // force numbers
+    HTML_INPUT.value = HTML_INPUT.match(/[0-9]+/); // force numbers
 }
 function verifNb() {
 
