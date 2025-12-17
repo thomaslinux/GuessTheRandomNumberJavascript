@@ -40,11 +40,13 @@ function onWheel(e) {
     }
 }
 
+// https://stackoverflow.com/questions/5961333/prevent-default-action-for-tab-key-in-chrome#:~:text=need%20to%20call%20the%20event%20on%20keydown
+// Already on keydown so why ??
 document.addEventListener('keydown', function (e) {
     verifKey(e);
 });
 function verifKey(e) {
-    if (e.key === 'Enter' || e.key === 'Tab') { e.preventDefault(); verifNb(); }
+    if (e.key === 'Enter' || e.key === 'Tab' || event.keyCode === 9) { e.preventDefault(); verifNb(); }
     if (e.key === 'n' || e.key === 'c' || e.key === '.') { e.preventDefault(); init(); }
     if (e.key === 'ArrowUp') { e.preventDefault(); operation('+', MAX / 20); }
     //if (e.key === 'ArrowRight') {e.preventDefault(); operation('+', MAX / 20);}
