@@ -1,4 +1,4 @@
-document.querySelector("#version").innerText += "\nJS_2025-12-17_12:16_debug"
+document.querySelector("#version").innerText += "\nJS_2025-12-17_12:19"
 const HTML_OUTPUT = document.getElementById("output");
 const HTML_INPUT = document.getElementById("input");
 const HTML_INFO_NB_VERIF = document.getElementById("nbVerif");
@@ -34,7 +34,7 @@ function init() {
 // document.addEventListener('keydown', function (e) {  verifKey(e); }); // doesn't work on chrome mobile ?
 
 // https://stackoverflow.com/questions/36753548/keycode-on-android-is-always-229#:~:text=keypress,-%2E
-document.addEventListener('keyup', function (e) {  verifKey(e); });
+document.addEventListener('keydown', function (e) {  verifKey(e); });
 
 // focus INPUT
 // document.addEventListener('keydown', function (e) {  HTML_INPUT.focus(); });
@@ -50,12 +50,12 @@ function verifKey(e) {
     if (e.key === 'ArrowDown') { e.preventDefault(); operation('-', MAX / 20); }
     //if (e.key === 'ArrowLeft') {e.preventDefault(); operation('-', MAX / 20);}
     if (e.key === '-' || e.key === 'q') { // dichotomic substraction
-        HTML_OUTPUT.style.display = "block";
+        // HTML_OUTPUT.style.display = "block";
         HTML_OUTPUT.innerText = "You pressed - "
         e.preventDefault();
         operation('-', (HTML_MAX.innerText-HTML_MIN.innerText)/2);
     } else {
-        HTML_OUTPUT.style.display = "block";
+        // HTML_OUTPUT.style.display = "block";
         HTML_OUTPUT.innerText = "You pressed " + e.key;
     }
     if (e.key === '+' || e.key === 's' || e.key === ' ') {
