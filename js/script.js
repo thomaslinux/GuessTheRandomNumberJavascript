@@ -1,4 +1,4 @@
-document.querySelector("#version").innerText += "\nJS_2025-12-17_11:45"
+document.querySelector("#version").innerText += "\nJS_2025-12-17_11:51"
 const HTML_OUTPUT = document.getElementById("output");
 const HTML_INPUT = document.getElementById("input");
 const HTML_INFO_NB_VERIF = document.getElementById("nbVerif");
@@ -89,7 +89,7 @@ function removeLetters() {
 function verifNb() {
 
     removeLetters();
-    
+
     // hide all elements first
     document.querySelector("#indicator_more").style.display = "none";
     document.querySelector("#indicator_less").style.display = "none";
