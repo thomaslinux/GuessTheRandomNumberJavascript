@@ -22,7 +22,7 @@ function init() {
     HTML_MAX.innerText = MAX;
     nbToFind = alea(MIN, MAX);
     nbVerif = -1;
-    verif();
+    removeLetters();
     HTML_INPUT.value = MAX;
     verifNb();
     HTML_INFO_NB_VERIF.innerText = "0";
@@ -83,11 +83,13 @@ function operation(operator, number) {
     }
 }
 
-function verif() {
+function removeLetters() {
     HTML_INPUT.value = HTML_INPUT.value.replace(/\D+/g, ''); // force numbers
 }
 function verifNb() {
 
+    removeLetters();
+    
     // hide all elements first
     document.querySelector("#indicator_more").style.display = "none";
     document.querySelector("#indicator_less").style.display = "none";
