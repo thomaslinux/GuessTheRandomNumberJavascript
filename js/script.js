@@ -43,7 +43,7 @@ document.addEventListener('keydown', function (e) {  verifKey(e); });
 // onkeydown =  (e) => {  verifKey(e); };
 // HTML_INPUT.addEventListener('keydown', function (e) {  verifKey(e); });
 function verifKey(e) {
-    if (e.key === 'Enter' || e.key === 'Tab' || event.keyCode === 9) { e.preventDefault(); verifNb(); }
+    if (e.key === 'Enter' || e.key === 'Tab' || e.keyCode === 9) { e.preventDefault(); verifNb(); }
     if (e.key === 'n' || e.key === 'c' || e.key === '.') { e.preventDefault(); init(); }
     if (e.key === 'ArrowUp') { e.preventDefault(); operation('+', MAX / 20); }
     //if (e.key === 'ArrowRight') {e.preventDefault(); operation('+', MAX / 20);}
@@ -66,6 +66,7 @@ function verifKey(e) {
     if (e.key === 'e') { e.preventDefault(); operation('-', MAX/200*15); }
     if (e.key === 'r') { e.preventDefault(); operation('+', MAX/200*2); }
 }
+
 
 // HTML_INPUT.addEventListener("input", verif)
 HTML_INPUT.addEventListener("wheel", onWheel)
