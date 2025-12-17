@@ -1,4 +1,4 @@
-document.querySelector("#version").innerText += "\nJS_2025-12-17_12:06_debug"
+document.querySelector("#version").innerText += "\nJS_2025-12-17_12:12_debug"
 const HTML_OUTPUT = document.getElementById("output");
 const HTML_INPUT = document.getElementById("input");
 const HTML_INFO_NB_VERIF = document.getElementById("nbVerif");
@@ -32,10 +32,15 @@ function init() {
 // https://stackoverflow.com/questions/5961333/prevent-default-action-for-tab-key-in-chrome#:~:text=need%20to%20call%20the%20event%20on%20keydown
 // Already on keydown so why ??
 // document.addEventListener('keydown', function (e) {  verifKey(e); }); // doesn't work on chrome mobile ?
+
+// https://stackoverflow.com/questions/36753548/keycode-on-android-is-always-229#:~:text=keypress,-%2E
+document.addEventListener('keypress', function (e) {  verifKey(e); });
+
+// focus INPUT
 // document.addEventListener('keydown', function (e) {  HTML_INPUT.focus(); });
 // input.keydown(function (e) {  verifKey(e); }) // jQuery only also input already exists ??
 // https://developer.mozilla.org/en-US/docs/Web/API/Element/keydown_event#browser_compatibility:~:text=onkeydown
-onkeydown =  (e) => {  verifKey(e); };
+// onkeydown =  (e) => {  verifKey(e); };
 // HTML_INPUT.addEventListener('keydown', function (e) {  verifKey(e); });
 function verifKey(e) {
     if (e.key === 'Enter' || e.key === 'Tab' || event.keyCode === 9) { e.preventDefault(); verifNb(); }
