@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <!-- https://stackoverflow.com/questions/4472891/how-can-i-disable-zoom-on-a-mobile-web-page#:~:text=user%2Dscalable%3D0 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <meta name="description" content="A game about guessing a random number between a MIN and a MAX">
     <title>Guess the number</title>
     <link rel="stylesheet" href="css/stylev2.css">
@@ -35,40 +35,43 @@
                 <span title="MAX / maximal possible Number" id="max">1000</span>
             </div>
             <div class="plateau-boutons">
+                <div id="operation-buttons">
+                    <div class="twoButtons">
+                        <button class="button" title="Number / 2" id="divide" onclick="operation('/',2)">/ 2
+                        </button>
+                        <button class="button" title="Number x 1.5" id="multiply" onclick="operation('*',1.5)">x
+                            1.5</button>
+                    </div>
+                    <div class="twoButtons">
+                        <button class="button" title="Number - MAX/200*15" id="button1" onclick="operation('-',75)">-
+                            75</button>
+                        <button class="button" title="Number + MAX/200*25" id="button2"
+                            onclick="operation('+',125)">+125</button>
+                    </div>
+                    <div class="twoButtons">
+                        <button class="button" title="Number - MAX/200*5" id="button3" onclick="operation('-',25)">-
+                            25</button>
+                        <button class="button" title="Number + MAX/200*10" id="button4" onclick="operation('+',50)">+
+                            50</button>
+                    </div>
+                    <div class="twoButtons">
+                        <button class="button" title="Number - MAX/200" id="button5" onclick="operation('-',5)">-
+                            5</button>
+                        <button class="button" title="Number + MAX/200*2" id="button6" onclick="operation('+',10)">+
+                            10</button>
+                    </div>
+                    <div class="twoButtons">
+                        <button class="button" title="Number - 1" id="button7" onclick="operation('-',1)">-
+                            1</button>
+                        <button class="button" title="Number + 1" id="button8" onclick="operation('+',1)">+
+                            1</button>
+                    </div>
+                </div>
                 <div class="twoButtons">
                     <button class="button" title="Press [n] to generate New random number to find" id="reload">New
                         Game</button>
                     <button class="button" title="Press [Enter] to verify the current input"
                         onclick="verifNb()">Enter</button>
-                </div>
-                <div class="twoButtons">
-                    <button class="button" title="Number / 2" id="divide" onclick="operation('/',2)">/ 2
-                    </button>
-                    <button class="button" title="Number x 1.5" id="multiply" onclick="operation('*',1.5)">x
-                        1.5</button>
-                </div>
-                <div class="twoButtons">
-                    <button class="button" title="Number - MAX/200*15" id="button1" onclick="operation('-',75)">-
-                        75</button>
-                    <button class="button" title="Number + MAX/200*25" id="button2"
-                        onclick="operation('+',125)">+125</button>
-                </div>
-                <div class="twoButtons">
-                    <button class="button" title="Number - MAX/200*5" id="button3" onclick="operation('-',25)">-
-                        25</button>
-                    <button class="button" title="Number + MAX/200*10" id="button4" onclick="operation('+',50)">+
-                        50</button>
-                </div>
-                <div class="twoButtons">
-                    <button class="button" title="Number - MAX/200" id="button5" onclick="operation('-',5)">- 5</button>
-                    <button class="button" title="Number + MAX/200*2" id="button6" onclick="operation('+',10)">+
-                        10</button>
-                </div>
-                <div class="twoButtons">
-                    <button class="button" title="Number - 1" id="button7" onclick="operation('-',1)">-
-                        1</button>
-                    <button class="button" title="Number + 1" id="button8" onclick="operation('+',1)">+
-                        1</button>
                 </div>
             </div>
         </div>
