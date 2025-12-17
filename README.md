@@ -26,6 +26,13 @@ Found here : https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-w
 
 - [x] Cheats : add keys '-' or 'q' for dichotomic substraction and '+' or 's' for dichotomic addition
 
+- [ ] make keys work on snap mobile / chrome mobile / brave mobile
+
+        (document.addEventListener('keydown', function (e) {  verifKey(e); });
+        // input.keydown(function (e) {  verifKey(e); }) // jQuery only also input already exists ??
+        // HTML_INPUT.addEventListener('keydown', function (e) {  verifKey(e); });
+        function verifKey(e) {})
+
 - [ ] Modify css to accommodate the change
       
 - [ ] Add a loadbar visual indicator
