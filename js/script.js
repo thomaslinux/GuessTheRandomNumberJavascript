@@ -10,6 +10,7 @@ const HTML_INFO_NB_VERIF = document.getElementById("nbVerif");
 const HTML_MIN = document.getElementById("min");
 const HTML_MAX = document.getElementById("max");
 const HTML_RELOAD_BUTTON = document.getElementById("reload");
+const HTML_WINS = document.querySelector("#wins span");
 document.querySelector("#version").innerText += "\nJS_2025-12-17_11:25"
 HTML_RELOAD_BUTTON.addEventListener('click', (e) => { init(); });
 // window.onload = init;
@@ -26,7 +27,7 @@ function init() {
     HTML_INPUT.value = MAX;
     verifNb();
     HTML_INFO_NB_VERIF.innerText = "0";
-    document.querySelector("#wins span").innerText = wins;
+    HTML_WINS.innerText = wins;
 }
 
 HTML_INPUT.addEventListener("input", verif)
@@ -113,13 +114,13 @@ function verifNb() {
         document.querySelector("#indicator_win").style.display = "block";
         HTML_MIN.innerText = HTML_INPUT.value;
         HTML_MAX.innerText = HTML_INPUT.value;
-        wins = document.querySelector("#wins span").innerText;
+        wins = HTML_WINS.innerText;
         if (boolWin === false) {
         wins++;
         boolWin = true;
         }
         localStorage.setItem("wins",wins);
-        document.querySelector("#wins span").innerText = wins;
+        HTML_WINS.innerText = wins;
     }
     if (boolWin === false) { // stop verif counter when win
     nbVerif++;
