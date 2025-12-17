@@ -45,7 +45,6 @@ document.addEventListener('keydown', function (e) {
 });
 function verifKey(e) {
     if (e.key === 'Enter') {
-        e.preventDefault();
         verifNb(); 
     }
     if (e.key === 'n' || e.key === 'c' || e.key === '.') {
