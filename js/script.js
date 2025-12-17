@@ -95,8 +95,13 @@ function operation(operator, number) {
 }
 
 function removeLetters() {
-    // HTML_INPUT.value = HTML_INPUT.value.replace(/\D+/g, ''); // force numbers
-    HTML_INPUT.value = HTML_INPUT.value.match(/[0-9]+/); // force numbers
+    HTML_INPUT.value = HTML_INPUT.value.replace(/\D+/g, ''); // force numbers
+    // .replace(/\D/g, ''):
+    //     \D: This is a shorthand character class that matches any character that is not a digit.
+    //     g: This global flag ensures that all occurrences in the string are replaced, not just the first one.
+    //     '': This means that every non-digit character found will be replaced with an empty string, effectively removing it from the input.
+
+    // HTML_INPUT.value = HTML_INPUT.value.match(/[0-9]+/); // force numbers // less performant, less compatibility
 }
 function verifNb() {
 
