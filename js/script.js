@@ -1,4 +1,4 @@
-document.querySelector("#version").innerText += "\nJS_2025-12-17_13:59"
+document.querySelector("#version").innerText += "\nJS_2025-12-17_14:00"
 const HTML_OUTPUT = document.getElementById("output");
 const HTML_INPUT = document.getElementById("input");
 const HTML_INFO_NB_VERIF = document.getElementById("nbVerif");
@@ -22,8 +22,8 @@ function init() {
     HTML_MAX.innerText = MAX;
     nbToFind = alea(MIN, MAX);
     nbVerif = -1;
-    removeLetters();
     HTML_INPUT.value = MAX;
+    removeLetters();
     verifNb();
     HTML_INFO_NB_VERIF.innerText = "0";
     HTML_WINS.innerText = wins;
