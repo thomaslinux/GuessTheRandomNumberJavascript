@@ -26,14 +26,9 @@ Found here : https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-w
 
 - [x] Cheats : add keys '-' or 'q' for dichotomic substraction and '+' or 's' for dichotomic addition
 
-- [ ] make keys work on snap mobile / chrome mobile / brave mobile
+- [ ] make numpad keys work on snap mobile / chrome mobile / brave mobile
 
-        (document.addEventListener('keydown', function (e) {  verifKey(e); });
-        // input.keydown(function (e) {  verifKey(e); }) // jQuery only also input already exists ??
-        // HTML_INPUT.addEventListener('keydown', function (e) {  verifKey(e); });
-        function verifKey(e) {})
-
-    - [ ] Handle caracter on input on chrome by getting the last character of the input substring
+    - [ ] Handle caracter on input on chrome mobile by getting the last character of the input substring
      https://stackoverflow.com/questions/5873810/how-can-i-get-last-characters-of-a-string#:~:text=substring
     
     - [ ] Handle the logic of key outside of verifKey(e) so it can be merged with the input substring ?
