@@ -50,6 +50,8 @@ function verifKey(e) {
     //if (e.key === 'ArrowRight') {operation('+', MAX / 20);}
     if (e.key === 'ArrowDown') { operation('-', MAX / 20); }
     //if (e.key === 'ArrowLeft') {operation('-', MAX / 20);}
+    if (e.key === 'q') { operation('+', (htmlMAX.innerText-htmlMIN.innerText)/2); } // dichotomic addition
+    if (e.key === 's') { operation('-', (htmlMAX.innerText-htmlMIN.innerText)/2); } // dichotomic substraction
     if (e.key === 'a') { operation('/', 2); }
     if (e.key === 'z') { operation('*', 1.5); }
     if (e.key === 'e') { operation('-', MAX/200*15); }
