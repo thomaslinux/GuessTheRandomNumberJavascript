@@ -10,7 +10,7 @@ const infoNbVerif = document.getElementById("nbVerif");
 const htmlMIN = document.getElementById("min");
 const htmlMAX = document.getElementById("max");
 const reload = document.getElementById("reload");
-document.querySelector("#version").innerText += "\nJS_2025-12-17_10:41"
+document.querySelector("#version").innerText += "\nJS_2025-12-17_10:44"
 reload.addEventListener('click', (e) => { init(); });
 // window.onload = init;
 init();
@@ -43,7 +43,8 @@ function onWheel(e) {
 // https://stackoverflow.com/questions/5961333/prevent-default-action-for-tab-key-in-chrome#:~:text=need%20to%20call%20the%20event%20on%20keydown
 // Already on keydown so why ??
 document.addEventListener('keydown', function (e) {  verifKey(e); });
-// input.keydown(function (e) {  verifKey(e); }) // jQuery only
+// input.keydown(function (e) {  verifKey(e); }) // jQuery only also input already exists ??
+input.addEventListener('keydown', function (e) {  verifKey(e); });
 function verifKey(e) {
     if (e.key === 'Enter' || e.key === 'Tab' || event.keyCode === 9) { e.preventDefault(); verifNb(); }
     if (e.key === 'n' || e.key === 'c' || e.key === '.') { e.preventDefault(); init(); }
