@@ -10,7 +10,7 @@ const infoNbVerif = document.getElementById("nbVerif");
 const htmlMIN = document.getElementById("min");
 const htmlMAX = document.getElementById("max");
 const reload = document.getElementById("reload");
-document.querySelector("#version").innerText += "\nJS_2025-12-17_08:59"
+document.querySelector("#version").innerText += "\nJS_2025-12-17_09:08"
 reload.addEventListener('click', (e) => { init(); });
 // window.onload = init;
 init();
@@ -44,14 +44,15 @@ document.addEventListener('keydown', function (e) {
     verifKey(e);
 });
 function verifKey(e) {
+    e.preventDefault();
     if (e.key === 'Enter') {verifNb(); }
-    if (e.key === 'n' || e.key === ' ') {init();}
+    if (e.key === 'n' || e.key === ' ' || e.key === '.') {init();}
     if (e.key === 'ArrowUp') { operation('+', MAX / 20); }
     //if (e.key === 'ArrowRight') {operation('+', MAX / 20);}
     if (e.key === 'ArrowDown') { operation('-', MAX / 20); }
     //if (e.key === 'ArrowLeft') {operation('-', MAX / 20);}
-    if (e.key === 'q') { operation('+', (htmlMAX.innerText-htmlMIN.innerText)/2); } // dichotomic addition
-    if (e.key === 's') { operation('-', (htmlMAX.innerText-htmlMIN.innerText)/2); } // dichotomic substraction
+    if (e.key === '-' || e.key === 'q') { operation('-', (htmlMAX.innerText-htmlMIN.innerText)/2); } // dichotomic substraction
+    if (e.key === '+' || e.key === 's') { operation('+', (htmlMAX.innerText-htmlMIN.innerText)/2); } // dichotomic addition
     if (e.key === 'a') { operation('/', 2); }
     if (e.key === 'z') { operation('*', 1.5); }
     if (e.key === 'e') { operation('-', MAX/200*15); }
@@ -61,6 +62,7 @@ function verifKey(e) {
 
 
 function operation(operator, number) {
+    if (boolWin === false) {
     let value = parseInt(input.value) || 0;
     let result = 0;
     switch (operator) {
@@ -72,6 +74,7 @@ function operation(operator, number) {
     }
     input.value = Math.floor(result);
     verifNb();
+    }
 }
 
 function verif() {
@@ -113,8 +116,10 @@ function verifNb() {
         localStorage.setItem("wins",wins);
         document.querySelector("#wins span").innerText = wins;
     }
+    if (boolWin === false) { // stop verif counter when win
     nbVerif++;
     infoNbVerif.innerText = nbVerif;
+    }
 }
 
 /**
