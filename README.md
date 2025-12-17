@@ -24,6 +24,8 @@ Found here : https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-w
 
 - [x] Move min and max indicators aside from the input
 
+- [x] Cheats : add keys '-' or 'q' for dichotomic substraction and '+' or 's' for dichotomic addition
+
 - [ ] Modify css to accommodate the change
       
 - [ ] Add a loadbar visual indicator
