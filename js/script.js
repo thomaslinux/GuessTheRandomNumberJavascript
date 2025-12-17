@@ -10,7 +10,7 @@ const infoNbVerif = document.getElementById("nbVerif");
 const htmlMIN = document.getElementById("min");
 const htmlMAX = document.getElementById("max");
 const reload = document.getElementById("reload");
-document.querySelector("#version").innerText += "\nJS_2025-12-17_09:48"
+document.querySelector("#version").innerText += "\nJS_2025-12-17_10:11"
 reload.addEventListener('click', (e) => { init(); });
 // window.onload = init;
 init();
@@ -45,23 +45,27 @@ document.addEventListener('keydown', function (e) {
 });
 function verifKey(e) {
     if (e.key === 'Enter') {
-        verifNb(); 
         e.preventDefault();
+        verifNb(); 
     }
     if (e.key === 'n' || e.key === 'c' || e.key === '.') {
-        init();
         e.preventDefault();
+        init();
     }
-    if (e.key === 'ArrowUp') { operation('+', MAX / 20); }
-    //if (e.key === 'ArrowRight') {operation('+', MAX / 20);}
-    if (e.key === 'ArrowDown') { operation('-', MAX / 20); }
-    //if (e.key === 'ArrowLeft') {operation('-', MAX / 20);}
-    if (e.key === '-' || e.key === 'q') { operation('-', (htmlMAX.innerText-htmlMIN.innerText)/2); } // dichotomic substraction
-    if (e.key === '+' || e.key === 's' || e.key === ' ') { operation('+', (htmlMAX.innerText-htmlMIN.innerText)/2); } // dichotomic addition
-    if (e.key === 'a') { operation('/', 2); }
-    if (e.key === 'z') { operation('*', 1.5); }
-    if (e.key === 'e') { operation('-', MAX/200*15); }
-    if (e.key === 'r') { operation('+', MAX/200*2); }
+    if (e.key === 'ArrowUp') { e.preventDefault(); operation('+', MAX / 20); }
+    //if (e.key === 'ArrowRight') {e.preventDefault(); operation('+', MAX / 20);}
+    if (e.key === 'ArrowDown') { e.preventDefault(); operation('-', MAX / 20); }
+    //if (e.key === 'ArrowLeft') {e.preventDefault(); operation('-', MAX / 20);}
+    if (e.key === '-' || e.key === 'q') {
+        e.preventDefault(); operation('-', (htmlMAX.innerText-htmlMIN.innerText)/2);
+    } // dichotomic substraction
+    if (e.key === '+' || e.key === 's' || e.key === ' ') {
+        e.preventDefault(); operation('+', (htmlMAX.innerText-htmlMIN.innerText)/2);
+    } // dichotomic addition
+    if (e.key === 'a') { e.preventDefault(); operation('/', 2); }
+    if (e.key === 'z') { e.preventDefault(); operation('*', 1.5); }
+    if (e.key === 'e') { e.preventDefault(); operation('-', MAX/200*15); }
+    if (e.key === 'r') { e.preventDefault(); operation('+', MAX/200*2); }
 }
 
 
