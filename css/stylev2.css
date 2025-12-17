@@ -7,8 +7,8 @@
   color: white;
   border: none;
   /* margin: 20px; */
-  height: 4rem;
-  font-size: 1.8rem;
+  height: 3.8rem;
+  font-size: 1.7rem;
   width: 175px;
   font-weight: bold;
   border-radius: 5px;
@@ -42,18 +42,18 @@
 }
 
 .input {
-  height: 4rem;
+  height: 3.8rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   border: none;
   outline: none;
-  border-radius: 1rem;
+  border-radius: 0.8rem;
   background-color: #054A44;
   font-weight: bold;
   color: white;
   /* width: fit-content; */
-  width: 6rem;
-  margin: 1rem auto;
+  width: 5.8rem;
+  margin: 0.8rem auto;
   box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.5);
 }
 
@@ -66,13 +66,13 @@
 }
 
 br {
-  height: 1rem;
+  height: 0.8rem;
 }
 
 body {
   /*https://developer.mozilla.org/fr/docs/Web/CSS/How_to/Layout_cookbook/Center_an_element*/
-  margin: 2rem;
-  font-size: 1.6rem;
+  margin: 1.8rem;
+  font-size: 1.5rem;
   /* max-width: 1280px; */
   align-items: center;
   display: flex;
@@ -83,7 +83,7 @@ body {
 }
 
 h1 {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   text-align: center;
   /* width: 100vw; */
   margin: auto;
