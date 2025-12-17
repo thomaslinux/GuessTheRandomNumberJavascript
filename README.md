@@ -33,6 +33,13 @@ Found here : https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-w
         // HTML_INPUT.addEventListener('keydown', function (e) {  verifKey(e); });
         function verifKey(e) {})
 
+    - [ ] Handle caracter on input on chrome by getting the last character of the input substring
+     https://stackoverflow.com/questions/5873810/how-can-i-get-last-characters-of-a-string#:~:text=substring
+    
+    - [ ] Handle the logic of key outside of verifKey(e) so it can be merged with the input substring ?
+
+    - [ ] switch case for logic, function call if more keys do the same thing
+
 - [ ] Modify css to accommodate the change
       
 - [ ] Add a loadbar visual indicator
