@@ -11,6 +11,10 @@ https://html-preview.github.io/?url=https://github.com/thomaslinux/GuessTheRando
 mirror 2 :
 https://previewhtml.github.io/?url=https%3A%2F%2Fgithub.com%2Fthomaslinux%2FGuessTheRandomNumberJavascript%2Fblob%2Fmain%2Findex.html
 
+mirror 3 :
+https://raw.githack.com/thomaslinux/GuessTheRandomNumberJavascript/main/index.html
+
+
 # TODO
 
 - [x] init function for faster reload when click on New Game
