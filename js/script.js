@@ -44,9 +44,14 @@ document.addEventListener('keydown', function (e) {
     verifKey(e);
 });
 function verifKey(e) {
-    e.preventDefault();
-    if (e.key === 'Enter') {verifNb(); }
-    if (e.key === 'n' || e.key === ' ' || e.key === '.') {init();}
+    if (e.key === 'Enter') {
+        verifNb(); 
+        e.preventDefault();
+    }
+    if (e.key === 'n' || e.key === ' ' || e.key === '.') {
+        init();
+        e.preventDefault();
+    }
     if (e.key === 'ArrowUp') { operation('+', MAX / 20); }
     //if (e.key === 'ArrowRight') {operation('+', MAX / 20);}
     if (e.key === 'ArrowDown') { operation('-', MAX / 20); }
