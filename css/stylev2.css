@@ -2,13 +2,13 @@
   font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
 }
 
-body:has(option[value="green"]:checked) {
+menu:has(option[value="green"]:checked) {
   --body-background: linear-gradient(135deg, #6E812A, #226B2A, #054A44);
   --button-background: #6BA55D;
   --button-background-hover: hsl(108, 29%, 71%);
   --text-color:black;
 }
-body:has(option[value="dark"]:checked) {
+menu:has(option[value="black"]:checked) {
   --body-background: black;
   --button-background: black;
   --button-background-hover: black;
