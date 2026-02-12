@@ -2,6 +2,13 @@
   font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
 }
 
+body:has(option[value="green"]:checked) {
+  --body-background: linear-gradient(135deg, #6E812A, #226B2A, #054A44);
+}
+body:has(option[value="dark"]:checked) {
+  --body-background: black;
+}
+
 .button {
   background-color: #6BA55D;
   color: white;
@@ -34,7 +41,8 @@
 }
 
 .indicateurs div {
-  background: linear-gradient(135deg, #6E812A, #226B2A);
+  /* background: linear-gradient(135deg, #6E812A, #226B2A); */
+  background: var(--body-background);
   color: white;
   padding: 10px;
   border-radius: 10px;
