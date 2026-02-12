@@ -95,7 +95,7 @@ body {
   flex-direction: column;
   min-height: 50vh; /*100vh not recommanded*/
   /* background-color: hsl(108, 29%, 71%); */
-  background-color: var(--body-background-hover);
+  background-color: var(--button-background-hover);
   position-anchor: 0;
 }
 
