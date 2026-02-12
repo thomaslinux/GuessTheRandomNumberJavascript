@@ -1,6 +1,5 @@
 * {
   font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
-  color: var(--text-color);
 }
 
 body:has(option[value="green"]:checked) {
@@ -96,7 +95,7 @@ body {
   flex-direction: column;
   min-height: 50vh; /*100vh not recommanded*/
   /* background-color: hsl(108, 29%, 71%); */
-  background-color: var(--body-background);
+  background-color: var(--body-background-hover);
   position-anchor: 0;
 }
 
