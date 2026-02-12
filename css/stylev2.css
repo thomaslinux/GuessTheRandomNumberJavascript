@@ -104,6 +104,7 @@ h1 {
   text-align: center;
   /* width: 100vw; */
   margin: auto;
+  color: var(--text-color);
 }
 
 .main {
@@ -150,4 +151,9 @@ h1 {
 	font-size: 1rem;
 	justify-content: space-between;
 	display: flex;
+  color: var(--text-color);
+}
+
+span {
+  color: var(--text-color);
 }
