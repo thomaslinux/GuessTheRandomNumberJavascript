@@ -1,16 +1,24 @@
 * {
   font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  color: var(--text-color);
 }
 
 body:has(option[value="green"]:checked) {
   --body-background: linear-gradient(135deg, #6E812A, #226B2A, #054A44);
+  --button-background: #6BA55D;
+  --button-background-hover: hsl(108, 29%, 71%);
+  --text-color:black;
 }
 body:has(option[value="dark"]:checked) {
   --body-background: black;
+  --button-background: black;
+  --button-background-hover: black;
+  --text-color: white;
 }
 
 .button {
-  background-color: #6BA55D;
+  /* background-color: #6BA55D; */
+  background-color: var(--button-background);
   color: white;
   border: none;
   /* margin: 20px; */
@@ -25,7 +33,8 @@ body:has(option[value="dark"]:checked) {
 
 .button:hover {
   cursor: pointer;
-  background-color: hsl(108, 29%, 71%);
+  /* background-color: hsl(108, 29%, 71%); */
+  background-color: var(--button-background-hover);
 }
 
 .button:active {
