@@ -39,9 +39,9 @@ Found here : https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-w
 
 - [ ] Buttons should appear progressively as part of an initial tutorial on how to play the game. (remake the game ?)
 
-- [ ] Light theme switch : https://web.dev/articles/building/a-theme-switch-component OR https://nouvelle-techno.fr/articles/changez-de-theme-en-un-clic-tutoriel-html-css-js
+- [-] Light theme switch : https://web.dev/articles/building/a-theme-switch-component OR https://nouvelle-techno.fr/articles/changez-de-theme-en-un-clic-tutoriel-html-css-js
 
-    - [ ] Theme change from option menu - https://webkit.org/blog/13096/css-has-pseudo-class/#:~:text=X%E2%80%9D%2E-,Dark%20mode%20toggle%20with%20no%20JS
+    - [x] Theme change from option menu - https://webkit.org/blog/13096/css-has-pseudo-class/#:~:text=X%E2%80%9D%2E-,Dark%20mode%20toggle%20with%20no%20JS (up version V4)
 
 - [ ] Cookie popup - To ask the user if he accepts to appear on the leaderboard and to have localdata saved (cookie preference check in script.js)
 
