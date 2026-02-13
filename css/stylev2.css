@@ -154,6 +154,11 @@ h1 {
   color: var(--text-color);
 }
 
+.input-zone {
+  display:flex;
+  justify-content:space-evenly;
+}
+
 .input-zone span {
   color: var(--text-color);
 }
