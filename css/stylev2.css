@@ -134,10 +134,10 @@ h1 {
 }
 
 #reload {
-  display:flex;
   background-color: white;
   text-wrap: nowrap;
   color: #054A44
+  
 }
 
 #reload:hover {
