@@ -70,7 +70,7 @@ function verifKey(e) {
 function dichotomic(operator) {
     operation(operator, (HTML_MAX.innerText-HTML_MIN.innerText)/2));
     // operation('+', (HTML_MAX.innerText-HTML_MIN.innerText)/2);
-    } // dichotomic 
+ // dichotomic 
 }
 
 // https://stackoverflow.com/questions/5873810/how-can-i-get-last-characters-of-a-string#:~:text=substring
