@@ -23,12 +23,14 @@ body:has(option[value="theme-black"]:checked) {
   /* margin: 20px; */
   height: 3.8rem;
   font-size: 1.7rem;
-  width: 8rem;
+  width: 10rem;
   font-weight: bold;
   border-radius: 5px;
   margin: 5px;
   box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.5);
 }
+
+
 
 .button:hover {
   cursor: pointer;
@@ -39,6 +41,10 @@ body:has(option[value="theme-black"]:checked) {
 .button:active {
   background-color: rgb(255, 136, 136);
   color: dark;
+}
+
+.indicateurs button {
+	width:4rem;
 }
 
 .indicateurs {
