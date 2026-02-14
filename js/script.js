@@ -59,12 +59,18 @@ function verifKey(e) {
         HTML_OUTPUT.innerText = "You pressed " + e.key;
     }
     if (e.key === '+' || e.key === 's' || e.key === ' ') {
-        e.preventDefault(); operation('+', (HTML_MAX.innerText-HTML_MIN.innerText)/2);
+        e.preventDefault();
+        operation('+', (HTML_MAX.innerText-HTML_MIN.innerText)/2);
     } // dichotomic addition
     if (e.key === 'a') { e.preventDefault(); operation('/', 2); }
     if (e.key === 'z') { e.preventDefault(); operation('*', 1.5); }
     if (e.key === 'e') { e.preventDefault(); operation('-', MAX/200*15); }
     if (e.key === 'r') { e.preventDefault(); operation('+', MAX/200*2); }
+}
+function dichotomic(operator) {
+    operation(operator, (HTML_MAX.innerText-HTML_MIN.innerText)/2);
+    // operation('+', (HTML_MAX.innerText-HTML_MIN.innerText)/2);
+    } // dichotomic 
 }
 
 // https://stackoverflow.com/questions/5873810/how-can-i-get-last-characters-of-a-string#:~:text=substring
