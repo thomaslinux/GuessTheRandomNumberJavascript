@@ -15,6 +15,11 @@ body:has(option[value="theme-black"]:checked) {
   --text-color: white;
 }
 
+--two-buttons-display: flex;
+body:has(input[id="hide-buttons"]:checked) {
+	--two-buttons-display: none;
+}
+
 .button {
   /* background-color: #6BA55D; */
   background-color: var(--button-background);
@@ -121,11 +126,13 @@ h1 {
 }
 
 .twoButtons {
-  display: flex;
+ /* display: flex;*/
+	display: var(--two-buttons-display);
   flex-direction: row;
 }
 
 #reload {
+  display:flex;
   background-color: white;
   text-wrap: nowrap;
   color: #054A44
