@@ -177,3 +177,7 @@ h1 {
 .input-zone span {
   color: var(--text-color);
 }
+
+.hidden {
+ display:none;
+}
