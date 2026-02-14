@@ -27,13 +27,13 @@
             </div>
             <div class="indicateurs input-zone">
                 <!-- <a href="https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-worst-input/#:~:text=input%20type%3D%22text%22%20inputmode%3D%22numeric%22">https://stackoverflow.blog/2022/12/26/why-the-Number - input-is-the-worst-input/</a> -->
-                <span title="MIN / minimal possible Number" id="min">0</span>
+                <button onclick="dichotomic('-')" title="MIN / minimal possible Number" id="min">0</button>
                 <pre>   <   </pre>
                 <input class="input" autofocus="false" id="input" type="text" inputmode="numeric" pattern="[0-9]*"
                     placeholder="enter a number" title="Enter a number or use the buttons">
                 </input>
                 <pre>   <   </pre>
-                <span title="MAX / maximal possible Number" id="max">1000</span>
+                <button onclick="dichotomic('+')" title="MAX / maximal possible Number" id="max">1000</button>
             </div>
             <div class="plateau-boutons">
                 <div id="operation-buttons">
@@ -79,7 +79,7 @@
         <div class="version-source">
             <p id="wins">Wins : <span role="textbox" contenteditable inputmode="numeric" pattern="[0-9]*">0</span></p>
             <p><a href="index.fr.html">FR</a> | EN</p>
-            <p> <span title="Current version of the page" id="version">V4_2026-02-12_10:14</span>
+            <p> <span title="Current version of the page" id="version">V4_2026-02-14_21:18</span>
                 <a href="https://github.com/thomaslinux/GuessTheRandomNumberJavascript/"> source</a>
             </p>    
         </div>
