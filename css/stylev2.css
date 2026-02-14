@@ -14,10 +14,12 @@ body:has(option[value="theme-black"]:checked) {
   --button-background-hover: black;
   --text-color: white;
 }
-
---two-buttons-display: flex;
+body {
+	--two-buttons-display: flex;
+}
 body:has(input[id="hide-buttons"]:checked) {
 	--two-buttons-display: none;
+	color:red;
 }
 
 .button {
