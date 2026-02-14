@@ -1,4 +1,4 @@
-document.querySelector("#version").innerText += "\nJS_2026-02-14_21:25"
+document.querySelector("#version").innerText += "\nJS_2026-02-14_21:31"
 const HTML_OUTPUT = document.getElementById("output");
 const HTML_INPUT = document.getElementById("input");
 const HTML_INFO_NB_VERIF = document.getElementById("nbVerif");
@@ -67,11 +67,11 @@ function verifKey(e) {
     if (e.key === 'e') { e.preventDefault(); operation('-', MAX/200*15); }
     if (e.key === 'r') { e.preventDefault(); operation('+', MAX/200*2); }
 }
-//function dichotomic(operator) {
-  //  operation(operator, (HTML_MAX.innerText-HTML_MIN.innerText)/2));
+function dichotomicOperation(operator) {
+  operation(operator, (HTML_MAX.innerText-HTML_MIN.innerText)/2));
     // operation('+', (HTML_MAX.innerText-HTML_MIN.innerText)/2);
  // dichotomic 
-//}
+}
 
 // https://stackoverflow.com/questions/5873810/how-can-i-get-last-characters-of-a-string#:~:text=substring
 // HTML_INPUT.addEventListener("input", (e) => {
