@@ -23,7 +23,7 @@ body:has(option[value="theme-black"]:checked) {
   /* margin: 20px; */
   height: 3.8rem;
   font-size: 1.7rem;
-  max-width: 175px;
+  width: 8rem;
   font-weight: bold;
   border-radius: 5px;
   margin: 5px;
