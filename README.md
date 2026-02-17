@@ -33,8 +33,10 @@ Found here : https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-w
 
     - [ ] switch case for logic, function call if more keys do the same thing
 
-- [ ] Modify css to accommodate the change
-      
+- [-] Modify css to accommodate the change
+
+- [ ] Modify the game with pico CSS
+
 - [ ] Add a loadbar visual indicator
 
 - [ ] Buttons should appear progressively as part of an initial tutorial on how to play the game. (remake the game ?)
