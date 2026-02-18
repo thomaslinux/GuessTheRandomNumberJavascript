@@ -1,4 +1,4 @@
-document.querySelector("#version").innerText += "\nJS_2026-02-14_21:34"
+document.querySelector("#version").innerText += "\nJS_2026-02-18_18:17"
 const HTML_OUTPUT = document.getElementById("output");
 const HTML_INPUT = document.getElementById("input");
 const HTML_INFO_NB_VERIF = document.getElementById("nbVerif");
@@ -15,7 +15,7 @@ let boolWin = false;
 HTML_RELOAD_BUTTON.addEventListener('click', (e) => { init(); });
 init();
 
-function init() {
+export function init() {
     wins = parseInt(localStorage.getItem("wins")) || 0;
     boolWin = false;
     HTML_MIN.innerText = MIN;
@@ -67,7 +67,8 @@ function verifKey(e) {
     if (e.key === 'e') { e.preventDefault(); operation('-', MAX/200*15); }
     if (e.key === 'r') { e.preventDefault(); operation('+', MAX/200*2); }
 }
-function dichotomicOperation(operator) {
+
+export function dichotomicOperation(operator) {
   operation(operator, (HTML_MAX.innerText-HTML_MIN.innerText)/2);
     // operation('+', (HTML_MAX.innerText-HTML_MIN.innerText)/2);
  // dichotomic 
@@ -88,7 +89,7 @@ function onWheel(e) {
     }
 }
 
-function operation(operator, number) {
+export function operation(operator, number) {
     if (boolWin === false) {
     let value = parseInt(HTML_INPUT.value) || 0;
     let result = 0;
@@ -104,7 +105,7 @@ function operation(operator, number) {
     }
 }
 
-function removeLetters() {
+export function removeLetters() {
     HTML_INPUT.value = HTML_INPUT.value.replace(/\D+/g, ''); // force numbers
     // .replace(/\D/g, ''):
     //     \D: This is a shorthand character class that matches any character that is not a digit.
@@ -113,7 +114,7 @@ function removeLetters() {
 
     // HTML_INPUT.value = HTML_INPUT.value.match(/[0-9]+/); // force numbers // less performant, less compatibility
 }
-function verifNb() {
+export function verifNb() {
 
     removeLetters();
 
