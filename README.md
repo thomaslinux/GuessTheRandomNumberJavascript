@@ -11,6 +11,8 @@ https://thomaslinux.github.io/GuessTheRandomNumberJavascript/
 
 # TODO
 
+## V3
+
 - [x] init function for faster reload when click on New Game
 
 - [x] A better way to handle input of a number - ```<input type="text" inputmode="numeric" pattern="[0-9]*">```
@@ -24,6 +26,23 @@ Found here : https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-w
 
 - [x] Cheats : add keys '-' or 'q' for dichotomic substraction and '+' or 's' for dichotomic addition
 
+## V4
+
+- [-] Modify css to accommodate the change
+
+- [-] Light theme switch : https://web.dev/articles/building/a-theme-switch-component OR https://nouvelle-techno.fr/articles/changez-de-theme-en-un-clic-tutoriel-html-css-js
+
+    - [x] Theme change from option menu - https://webkit.org/blog/13096/css-has-pseudo-class/#:~:text=X%E2%80%9D%2E-,Dark%20mode%20toggle%20with%20no%20JS (up version V4)
+
+
+## V5
+
+- [ ] script type="module" to protect the values from being accessed in the console
+
+## V6
+
+- [ ] Redo the script in TypeScript to make the code compatible with Internet Explorer or other browsers
+
 - [ ] make numpad keys work on snap mobile / chrome mobile / brave mobile
 
     - [ ] Handle caracter on input on chrome mobile by getting the last character of the input substring
@@ -33,17 +52,13 @@ Found here : https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-w
 
     - [ ] switch case for logic, function call if more keys do the same thing
 
-- [-] Modify css to accommodate the change
+## V7
 
 - [ ] Modify the game with pico CSS
 
 - [ ] Add a loadbar visual indicator
 
 - [ ] Buttons should appear progressively as part of an initial tutorial on how to play the game. (remake the game ?)
-
-- [-] Light theme switch : https://web.dev/articles/building/a-theme-switch-component OR https://nouvelle-techno.fr/articles/changez-de-theme-en-un-clic-tutoriel-html-css-js
-
-    - [x] Theme change from option menu - https://webkit.org/blog/13096/css-has-pseudo-class/#:~:text=X%E2%80%9D%2E-,Dark%20mode%20toggle%20with%20no%20JS (up version V4)
 
 - [ ] Cookie popup - To ask the user if he accepts to appear on the leaderboard and to have localdata saved (cookie preference check in script.js)
 
@@ -76,4 +91,3 @@ Found here : https://stackoverflow.blog/2022/12/26/why-the-number-input-is-the-w
         - min and max 
 
     - [ ] About section - To advertise my awesome self
-
