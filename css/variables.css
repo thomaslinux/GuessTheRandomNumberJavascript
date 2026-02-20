@@ -4,7 +4,11 @@ body {
 }
 body:has(input[id="hide-buttons"]:checked) {
 	--two-buttons-display: none;
-	color:red;
+	/* color:red; */
+}
+
+body:has(input[id="show-help"]:checked) {
+  --show-help-display: content;
 }
 
 .twoButtons {

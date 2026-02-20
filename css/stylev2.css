@@ -20,13 +20,13 @@ label.button {
 }
 
 .aside {
-  display: var(--show-help-display) !important;
-  position:fixed;
-  border-radius: 2px;
-  background-color: var(--plateau-background);
-  color: var(--text-color);
-  width: 300px;
-  top: 200px;
+	/* display: var(--show-help-display) !important; */
+	position: fixed;
+	border-radius: 2px;
+	/* background-color: var(--plateau-background); */
+	width: 400px;
+	top: 227px;
+	align-self: center;
 }
 
 .button {
