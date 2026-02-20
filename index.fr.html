@@ -10,11 +10,15 @@
     <link rel="stylesheet" href="css/stylev2.css">
 </head>
 
-<body>
-    <main class="main">
+<body class="body">
+    <div class="main">
+        <main>
         <!-- <a href="https://css-tricks.com/auto-growing-inputs-textareas/#aa-non-input-elements-expand-naturally"></a> -->
-        <h1 title="Devine le nombre entre MIN et MAX">Devine le nombre
-        </h1>
+        <h1 title="Devine le nombre entre MIN et MAX">Devine le nombre</h1>
+        <div class="show-help">
+            <input type="checkbox" class="hidden" id="show-help">
+            <label for="show-help" class="button ">?</label>
+        </div>
         <div class="table-jeu">
             <div title="Information sur votre supposition" class="indicateurs">
                 <div title="Gardez verifs au plus bas !">Verifs : <span id="nbVerif"></span></div>
@@ -71,7 +75,17 @@
                         onclick="verifNb()">Entrer</button>
                 </div>
             </div>
-        </div>
+        </div>       
+        </main>
+        <aside class="aside main container pico help table-jeu plateau-boutons">
+        <h2>Comment jouer ?</h2>
+        <p>Vous devez trouver un nombre</p>
+        <p>Ce nombre est aléatoirement choisi entre 0 et 1000</p>
+        <p>Entrez un nombre</p>
+        <p>Entrée pour vérifier le nombre</p>
+        <p>L'interface indique si le nombre à trouver est plus petit ou plus grand que le nombre que vous entrez</p>
+    </aside>
+        <footer>
         <div class="version-source">
             <p id="wins">Victoires : <span role="textbox" contenteditable inputmode="numeric" pattern="[0-9]*">0</span>
             </p>
@@ -88,8 +102,9 @@
             </select>
             <input type="checkbox" id="hide-buttons"> <label for="hide-buttons">Hide buttons</label>
         </menu>
+        </footer>
         <script defer src="js/script.js"></script>
-    </main>
+    </div>
 </body>
 
 </html>

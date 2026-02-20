@@ -3,23 +3,58 @@
 }
 
 body:has(option[value="theme-green"]:checked) {
-  --body-background: linear-gradient(135deg, #6E812A, #226B2A, #054A44);
+  --plateau-background: linear-gradient(135deg, #6E812A, #226B2A, #054A44);
   --button-background: #6BA55D;
   --button-background-hover: hsl(108, 29%, 71%);
   --text-color:black;
 }
 body:has(option[value="theme-black"]:checked) {
-  --body-background: black;
+  --plateau-background: black;
   --button-background: black;
   --button-background-hover: black;
   --text-color: white;
 }
 body {
 	--two-buttons-display: flex;
+  --show-help-display: none;
 }
 body:has(input[id="hide-buttons"]:checked) {
 	--two-buttons-display: none;
 	color:red;
+}
+
+body:has(input[id="show-help"]:checked) {
+  --show-help-display: content;
+}
+
+.show-help {
+	position: relative;
+	top: -3rem;
+	right: -21rem;
+	height: 0px;
+}
+
+/* .show-help input {
+  visibility: hidden;
+} */
+label.button {
+  display: inline-block;
+  text-align: center;
+  width: 2rem;
+  height: inherit;
+  height: unset;
+  text-anchor: middle;
+
+}
+
+.aside {
+  display: var(--show-help-display) !important;
+  position:fixed;
+  border-radius: 2px;
+  background-color: var(--plateau-background);
+  color: var(--text-color);
+  width: 300px;
+  top: 200px;
 }
 
 .button {
@@ -63,7 +98,7 @@ body:has(input[id="hide-buttons"]:checked) {
 
 .indicateurs div {
   /* background: linear-gradient(135deg, #6E812A, #226B2A); */
-  background: var(--body-background);
+  background: var(--plateau-background);
   color: white;
   padding: 10px;
   border-radius: 10px;
@@ -154,7 +189,7 @@ h1 {
 
 .plateau-boutons {
   /* background: linear-gradient(135deg, #6E812A, #226B2A, #054A44); */
-  background: var(--body-background);
+  background: var(--plateau-background);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -180,4 +215,8 @@ h1 {
 
 .hidden {
  display:none;
+}
+
+.visibility-hidden {
+  visibility: hidden;
 }
