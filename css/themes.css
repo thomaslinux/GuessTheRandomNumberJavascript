@@ -1,0 +1,37 @@
+body:has(option[value="theme-green"]:checked) {
+  --plateau-background: linear-gradient(135deg, #6E812A, #226B2A, #054A44);
+  --button-background: #6BA55D;
+  --button-background-hover: hsl(108, 29%, 71%);
+  --text-color:black;
+}
+body:has(option[value="theme-black"]:checked) {
+  /* --plateau-background: linear-gradient(135deg, #9e0b0b, #43444e, #413597); */
+  --plateau-background: linear-gradient(135deg, #22241c, #5962b1, #3e968e);
+  --button-background: rgb(90, 90, 90);
+  --button-background-hover: black;
+  --text-color: white;
+}
+
+body:has(option[value="theme-blue"]:checked) {
+  --plateau-background: linear-gradient(135deg, #22241c, #5962b1, #3e968e);
+}
+
+body:has(input[id="show-help"]:checked) {
+  --show-help-display: content;
+}
+
+.button {
+  background-color: var(--button-background);
+}
+
+.button:hover {
+  background-color: var(--button-background-hover);
+}
+
+.indicateurs div {
+  background: var(--plateau-background);
+}
+
+body {
+  background-color: var(--button-background-hover);
+}

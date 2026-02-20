@@ -2,31 +2,6 @@
   font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
 }
 
-body:has(option[value="theme-green"]:checked) {
-  --plateau-background: linear-gradient(135deg, #6E812A, #226B2A, #054A44);
-  --button-background: #6BA55D;
-  --button-background-hover: hsl(108, 29%, 71%);
-  --text-color:black;
-}
-body:has(option[value="theme-black"]:checked) {
-  --plateau-background: black;
-  --button-background: black;
-  --button-background-hover: black;
-  --text-color: white;
-}
-body {
-	--two-buttons-display: flex;
-  --show-help-display: none;
-}
-body:has(input[id="hide-buttons"]:checked) {
-	--two-buttons-display: none;
-	color:red;
-}
-
-body:has(input[id="show-help"]:checked) {
-  --show-help-display: content;
-}
-
 .show-help {
 	position: relative;
 	top: -3rem;
@@ -34,9 +9,6 @@ body:has(input[id="show-help"]:checked) {
 	height: 0px;
 }
 
-/* .show-help input {
-  visibility: hidden;
-} */
 label.button {
   display: inline-block;
   text-align: center;
@@ -58,8 +30,8 @@ label.button {
 }
 
 .button {
-  /* background-color: #6BA55D; */
-  background-color: var(--button-background);
+  background-color: #6BA55D;
+  /* background-color: var(--button-background); */
   color: white;
   border: none;
   /* margin: 20px; */
@@ -76,8 +48,8 @@ label.button {
 
 .button:hover {
   cursor: pointer;
-  /* background-color: hsl(108, 29%, 71%); */
-  background-color: var(--button-background-hover);
+  background-color: hsl(108, 29%, 71%);
+  /* background-color: var(--button-background-hover); */
 }
 
 .button:active {
@@ -97,8 +69,7 @@ label.button {
 }
 
 .indicateurs div {
-  /* background: linear-gradient(135deg, #6E812A, #226B2A); */
-  background: var(--plateau-background);
+  background: linear-gradient(135deg, #6E812A, #226B2A);
   color: white;
   padding: 10px;
   border-radius: 10px;
@@ -142,8 +113,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 50vh; /*100vh not recommanded*/
-  /* background-color: hsl(108, 29%, 71%); */
-  background-color: var(--button-background-hover);
+  background-color: hsl(108, 29%, 71%);
+  /* background-color: var(--button-background-hover); */
   position-anchor: 0;
 }
 
@@ -188,8 +159,8 @@ h1 {
 }
 
 .plateau-boutons {
-  /* background: linear-gradient(135deg, #6E812A, #226B2A, #054A44); */
-  background: var(--plateau-background);
+  background: linear-gradient(135deg, #6E812A, #226B2A, #054A44);
+  /* background: var(--plateau-background); */
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,0 +1,15 @@
+body {
+  --two-buttons-display: flex;
+  --show-help-display: none;
+}
+body:has(input[id="hide-buttons"]:checked) {
+	--two-buttons-display: none;
+	color:red;
+}
+
+.twoButtons {
+	display: var(--two-buttons-display);
+}
+.plateau-boutons {
+  background: var(--plateau-background);
+}
